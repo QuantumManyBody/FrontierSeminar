@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Math Frontier Seminar, RPI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <style type="text/css">
+    body {
+        margin: 0;
+        color: white;
+        font-family: 'Geist', sans-serif;
+        font-size: 16pt;
+        background: rgb(10,10,10);
+    }
+
+    .container {
+        max-width: 1400px;
+        margin: 1em 2em;
+    }
+    h1 {
+        font-size: 2.4em;
+        text-shadow: 2px 2px 10px rgb(23, 233, 92);
+    }
+    h2, h3 {
+        font-size: 1.8em;
+        font-weight: normal;
+    }
+    a {
+        color: white;
+    }
+
+    table {
+        border-collapse: collapse;
+        margin: 1em 0em;
+    }
+    th, td {
+        border: 1px solid rgb(80,80,80);
+        padding: 8px;
+    }
+    tr:nth-child(even) td {
+        background: rgb(20,20,20);
+    }
+    tr:hover td {
+        background: rgb(40, 40, 40);
+    }
+    details {
+        cursor: pointer;
+    }
+
+    details p {
+        margin-top: 1em;
+    }
+
+    .notice {
+        border-left: 6px solid white;
+        padding-left: 1em;
+    }
+    .tabs {
+        display: flex;
+    }
+    .tab {
+        flex: 1;
+        text-align: left;
+        font-size: 1.15em;
+        color: white;
+        color: rgb(130,130, 130);
+        background: rgb(30,30, 30);
+        border: none;
+        border-bottom: 2px solid rgb(120,120, 120);
+    }
+
+    .tab.active {
+        color: white;
+        background: rgb(10,10,10);
+        border-bottom: none;
+    }
+    </style>
+    <body>
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 6em;">
+                <div>
+                    <h1 style="margin: 0em;">Math Frontier Seminar</h1>
+                    <p style=>Department of Mathematical Sciences</p>
+                    <p style="margin: 0.2em 0em">TBA @ TBA</p>
+                    <div class="notice">Notice: Dr. Sottile's talk will be on 09/29 (Tuesday)</div>
+                </div>
+                <image id="rpi" style="width: auto; height:3em; margin: 1em;" src="./logo.png" alt="">
+            </div>
+
+
+            <div style="margin-bottom: 4em;">
+                <p>
+                    This seminar is a flatform for math students to showcase their 
+                    research and to learn from people who work on real applications.
+                    <b>All are welcome</b>, and there shall be food.</p>
+
+                    <div style="display: flex; justify-content: right;">
+                    <div>
+                        
+                        <p>Organizers:</p>
+                        <div>
+                            <div>
+                                <span>Chair:</span>
+                                    Chanaka D. Mapa Mudiyanselage
+                            </div>
+                            <div>
+                                <span>Co-Chair:</span>
+                                    Correy Currun
+                            </div>
+                            <div>
+                                <span>Mentor:</span>
+                                    Prof. Fabian M. Faulstich
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <h2>Schedule (F25)</h2>
+            <div class="tab-content active" id="content-fall">
+                <!-- Fall 2025 semester-section -->
+                <div class="semester-section">
+                    
+                    <table>
+                        <tr>
+                            <th style="width:10%">Date</th>
+                            <th style="width:65%">Title <span>(click for abstract)</span></th>
+                            <th>Speaker</th>
+                        </tr>
+                        <tr>
+                            <td>09/08</td>
+                            <td>
+                                <details>
+                                    <summary>TBA</summary>
+                                    <p>TBA</p>
+                                </details>
+                            </td>
+                            <td>Zachery Wolski</td>
+                        </tr>
+                        <tr>
+                            <td>09/15</td>
+                            <td>
+                                <details>
+                                    <summary style="font-weight:400;">TBA</summary>
+                                    <p style="font-weight:400;">TBA</p>
+                                </details>
+                            </td>
+                            <td>Jack Mandell (Tentative)</td>
+                        </tr>
+                        <tr>
+                            <td>09/22</td>
+                            <td>
+                                <details>
+                                    <summary style="font-weight:400;">CTSuggest: An LLM-powered Open Source Application to support Clinical Trial Design by Suggesting Baseline Features</summary>
+                                    <p style="font-weight:400;">The specification of potentially confounding baseline features or covariates is a crucial step in the design of prospective and retrospective clinical trials. Baseline features are critical for ensuring the integrity of the study design, the validity of the results, and the generalizability of the findings. We introduce CTSuggest, an application leveraging large language models (LLMs) to generate baseline features as part of the clinical trial design process. Users first specify basic trial metadata, and then CTSuggest suggests appropriate features with an explanation for each feature. Users can create an entirely new trial or start with metadata from an existing trial from ClinicalTrials.gov. We perform experiments validating the quality of CTSuggest’s baseline features using the benchmark CT-Pub dataset taken from clinical trial publications and evaluating using the “LLM-as-a-Judge” (LaaJ) framework provided in the CTBench benchmark. The results show that the feature suggestions generated by the state-of-the-art GPT-4o model meet or exceed the previously published CTBench results. We also show the promise of using a smaller open-source Llama model. Additionally, we examine the reliability of LaaJ evaluation within this setting. Coherence checking revealed hallucinations in the LaaJ’s evaluation, necessitating a postprocessing correction step that yielded lower but more accurate performance metrics. Three different types of hallucination were observed. The hallucination rate provides a quantifiable coherence metric that can be systematically used to improve LaaJ reliability. Our findings underscore the challenges in developing reliable LLM evaluation methods in healthcare applications and demonstrate a potential framework for improving LaaJ systems.</p>
+                                </details>
+                            </td>
+                            <td>Correy Currun (Tentative)</td>
+                        </tr>
+                        <tr>
+                            <td><b>09/30 (Tuesday)</b></td>
+                            <td>
+                                <details>
+                                    <summary style="font-weight:400;">TBA</summary>
+                                    <p style="font-weight:400;">TBA</p>
+                                </details>
+                            </td>
+                            <td><a href="https://franksottile.github.io/" target="_blank">Dr. Sottile</a> (Texas A&amp;M)</td>
+                        </tr>
+                        <tr>
+                            <td>10/06</td>
+                            <td>
+                                <details>
+                                    <summary style="font-weight:400;">TBA</summary>
+                                    <p style="font-weight:400;">TBA</p>
+                                </details>
+                            </td>
+                            <td>Drake Clark (U. Minnesota)</td>
+                        </tr>
+                        <tr>
+                            <td>10/13</td>
+                            <td>Columbus Day: <b>No Seminar</b></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10/20</td>
+                            <td>
+                                <details>
+                                    <summary style="font-weight:400;">A Multi-Frequency Helmholtz Solver Based on the WaveHoltz Algorithm</summary>
+                                    <p style="font-weight:400;">We develop and analyze a new approach for simultaneously computing multiple solutions to the Helmholtz
+                                    equation for different frequencies and different forcing functions. The new Multi-Frequency WaveHoltz
+                                    (MFWH) algorithm is an extension of the original WaveHoltz method and both are based on time-filtering
+                                    solutions to an associated wave-equation. With MFWH, the different Helmholtz solutions are computed
+                                    simultaneously by solving a single wave equation combined with multiple time filters. The MFWH algorithm
+                                    defines a fixed-point iteration which can be accelerated with Krylov methods such as GMRES. The solution
+                                    of the wave equation can be efficiently solved with implicit time-stepping using as few as five time-steps per
+                                    period. Discretization errors in time can be completely removed by various adjustments. Numerical results
+                                    are given to confirm the convergence theory when solving energy conserving problems.
+                                    </p>
+                                </details>
+                            </td>
+                            <td>Francis Appiah (Tentative)</td>
+                        </tr>
+                        <tr>
+                            <td>10/27</td>
+                            <td>
+                                <details>
+                                    <summary style="font-weight:400;">TBA</summary>
+                                    <p style="font-weight:400;">TBA</p>
+                                </details>
+                            </td>
+                            <td>Zihan Nie (Tentative)</td>
+                        </tr>
+                        <tr>
+                            <td>11/03</td>
+                            <td>
+                                <details>
+                                    <summary style="font-weight:400;">TBA</summary>
+                                    <p style="font-weight:400;">TBA</p>
+                                </details>
+                            </td>
+                            <td><a href="https://heshandevaka.github.io/" target="_blank">Heshan Fernando</a> (RPI ECSE)</td>
+                        </tr>
+                        <tr>
+                            <td>11/10</td>
+                            <td>
+                                <details>
+                                    <summary style="font-weight:400;">Canonical Polyadic Decomposition for efficient Electron Correlation Methods</summary>
+                                    <p style="font-weight:400;">TBA</p>
+                                </details>
+                            </td>
+                            <td>Talha Aziz</td>
+                        </tr>
+                        <tr>
+                            <td>11/17</td>
+                            <td>
+                                <details>
+                                    <summary style="font-weight:400;">TBA</summary>
+                                    <p style="font-weight:400;">TBA</p>
+                                </details>
+                            </td>
+                            <td>Liangliang(Lia) Zhang (RPI CS)(Tentative)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div style="display:flex; justify-content: right; margin: 2em 0em;">
+                <div>
+                    Interested in sponsoring us?<br>
+                    Please contact Chanaka Mapa at <a href="mailto:mapamc@rpi.edu">mapamc@rpi.edu</a>
+                </div>
+            </div>
+
+
+            <hr>
+
+            <h2>Previous Talks</h2>
+            <!-- Tab content: Spring 2025 -->
+            <details>
+                <summary>
+                    SP25
+                </summary>
+            <div class="tab-content" id="content-spring">
+                <!-- Spring 2025 semester-section -->
+                <div class="semester-section">
+                    <div class="semester-info">
+                        <p><strong>Location:</strong> Amos Eaton 215 &nbsp;|&nbsp; <strong>Time:</strong> Thursdays 4:00PM - 5:00PM EST</p>
+                        <div>
+                            <div>
+                                <span>Chair:</span>
+                                <a href="https://chanakadilshanmapa.wixsite.com/chanaka-mapa" target="_blank">Chanaka D. Mapa Mudiyanselage</a>
+                            </div>
+                            <div>
+                                <span>Co-Chair:</span>
+                                <a href="https://www.kangbo.dev/" target="_blank">Kangbo Li</a>
+                            </div>
+                            <div>
+                                <span>Mentor:</span>
+                                <a href="https://fabianfaulstich.com/" target="_blank">Prof. Fabian M. Faulstich</a>
+                            </div>
+                        </div>
+                        <!-- <div class="notice">
+                            <span style="font-weight:500;">Session Highlights:</span><br>
+                            • <a href="https://wangk9562.wixsite.com/kexinwang" target="_blank">Ada Wang</a>'s talk was on 02/21 (Friday) from 12:30PM - 1:30PM @ AE214<br>
+                            • <a href="https://math.berkeley.edu/~svala/" target="_blank" style="color:#22223b;text-decoration:underline;">Svala Sverrisdottir</a>'s talk was on 03/31 (Monday) from 4:00PM - 5:00PM @ AE215
+                        </div> -->
+                    </div>
+                    
+                    <table>
+                        <tr>
+                            <th style="width:10%">Date</th>
+                            <th style="width:65%">Title <span style="color:#fff;font-weight:400;">(click for abstract)</span></th>
+                            <th>Speaker</th>
+                        </tr>
+                        <tr>
+                            <td>02/06</td>
+                            <td>
+                              <details>
+                                   <summary>Damped Proximal Augmented Lagrangian Method for weakly-Convex Problems with Convex Constraints</summary>
+                                  <p>We give a damped proximal augmented Lagrangian method (DPALM) for solving problems with a weakly-convex objective and convex linear/non-linear constraints. Instead of taking a full stepsize, DPALM adopts a damped dual stepsize to ensure the boundedness of dual iterates. We show that DPALM can produce a (near) ε-KKT point within O(ε−2) outer iterations if each DPALM subproblem is solved to a proper accuracy. In addition, we establish overall iteration complexity of DPALM when the objective is either a regularized smooth function or in a regularized compositional form. For the former case, DPALM achieves the complexity of eO ε−2.5 to produce an ε-KKT point by applying an accelerated proximal gradient (APG) method to each DPALM subproblem. For the latter case, the complexity of DPALM is eO ε−3 to produce a near ε-KKT point by using an APG to solve a Moreau-envelope smoothed version of each subproblem. Our outer iteration complexity and the overall complexity either generalize existing best ones from unconstrained or linear-constrained problems to convex-constrained ones, or improve over the best-known results on solving the same-structured problems. Furthermore, numerical experiments on linearly/quadratically constrained non-convex quadratic programs and linear-constrained robust nonlinear least squares are conducted to demonstrate the empirical efficiency of the proposed DPALM over several state-of-the art methods.</p>
+                              </details>
+                            </td>
+                            <td>Hari Dahal</td>
+                        </tr>
+                        <tr>
+                            <td>02/13</td>
+                            <td>
+                                <details>
+                                    <summary>Superconducting Qubit Control with Single Flux Quantum Pulse Trains</summary>
+                                    <p>Qubit control is one of the main challenges of building a scalable Quantum computer with superconducting qubits. Current technologies are based on room temperature microwave generators. Scaling microwave control to millions of qubits is more than an engineering challenge due to the excessive heat delivered to the cryostat and the hardware cost. This talk will introduce the basics of microwave qubit control and some of its issues. Then we will discuss the theory and experimental realization of a control technology using only superconducting (cold) digital (cheap) circuits, which opens a path towards scalable qubit control.</p>
+                                </details>
+                            </td>
+                            <td><a href="https://www.kangbo.dev/" target="_blank">Kangbo Li</a></td>
+                        </tr>
+                        <tr>
+                            <td><b>02/21 (Friday)</b></td>
+                            <td>
+                              <details>
+                                  <summary>Computing Arrangements of Hypersurfaces</summary>
+                                  <p>In this talk, I will present a Julia package, HypersurfaceRegions.jl, for computing all connected components in the complement of an arrangement of real algebraic hypersurfaces in $R^n$. The package is based on a modified implementation of the algorithm from the paper "Smooth Connectivity in Real Algebraic Varieties" by Cummings et al. I will outline the theory behind the algorithm and our implementation. I will demonstrate the use of the package through various examples.</p>
+                              </details>
+                          </td>
+                            <td><a href="https://wangk9562.wixsite.com/kexinwang" target="_blank">Ada Wang</a> (Harvard)</td>
+                        </tr>
+                        <tr>
+                            <td>02/27</td>
+                            <td>
+                              <details>
+                                  <summary>An algorithm for numerically solving the Maxwell-Bloch equations.</summary>
+                                  <p>As described by quantum mechanics, energy is absorbed and emitted from atoms in the form of photons with discrete energy values. When an atom absorbs or emits a photon, electrons transition up or down energy levels. The energy associated with these transition determines the frequency, i.e. color, of the absorbed or emitted light. Using Schrodinger’s equation to describe the atomic structure, and Maxwell’s equations to describe the light, a system of equations that fully describes the behavior of the light matter interaction can be derived. This system is known as the Maxwell-Bloch equations. In this talk, an algorithm for approximating solutions to the Maxwell-Bloch equations is discussed. Algorithms for an atom with 2 and 3 energy levels are discussed, as well as an algorithm for the more general M level problem. We also use these algorithms to probe the behavior of soliton solutions for the 2 and 3 energy level systems.</p>
+                              </details>
+                          </td>
+                            <td>Miles Corn</td>
+                        </tr>
+                        <tr>
+                            <td>03/06</td>
+                            <td>Spring Break: <b>No Seminar</b></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>03/13</td>
+                            <td>
+                              <details>
+                                  <summary>EigenWave: Computing Eigenvalues and Eigenvectors by Time-Filtering the Wave Equation</summary>
+                                  <p>A novel EigenWave algorithm is described to compute eigenvalues and eigenfunctions of elliptic boundary value problems. Based on the recently developed WaveHoltz scheme, the algorithm solves a related time-dependent wave equation as part of an iteration. At each iteration, the solution is filtered in time. After filtering, the solution mainly contains eigenmodes whose eigenvalues are near the target frequency of the filter. The iteration is embedded within a matrix-free Arnoldi algorithm, allowing the efficient computation of multiple eigenpairs near the target frequency. The approach allows the computation of eigenvalues anywhere in the spectrum without the need to invert an indefinite matrix, as is common with other approaches. The approach is demonstrated by finding eigenpairs of the Laplacian in complex geometry using overset grids. Results in two and three-space dimensions are presented. For large enough problems, it is demonstrated that EigenWave can outperform modern Arnoldi-type eigenvalue algorithms.</p>
+                              </details>
+                          </td>
+                            <td>Ngan Le</td>
+                        </tr>
+                        <tr>
+                            <td>03/20</td>
+                            <td>
+                              <details>
+                                  <summary>Guaranteeing Performance in Autonomous Helicopter Aerial Refueling</summary>
+                                  <p>Helicopter aerial refueling refers to the process of refueling a helicopter in mid-flight with the aid of a tanker aircraft. This maneuver is particularly challenging due to 1) complex aerodynamic interactions between the helicopter, the tanker, and the refueling hose-drogue system, 2) high pilot workload, 3) strict safety constraints, and 4) the contact-critical nature of the operation. To address these challenges, we propose a novel autonomous control methodology that combines model-based control with data-driven approaches such as reinforcement learning (RL). Given that aerial refueling is a safety-critical operation, it is essential to guarantee stability and performance for this hybrid control system. This talk will explain how Lyapunov stability and ultimate boundedness can be leveraged to establish rigorous stability and performance guarantees while accounting for controller parameters and uncertainties in the drogue dynamics.</p>
+                              </details>
+                          </td>
+                            <td>Damsara Jayarathna (RPI MANE)</td>
+                        </tr>
+                        <tr>
+                            <td>03/27</td>
+                            <td>
+                              <details>
+                                  <summary>Accurate and efficient linear-scaling framework for hybrid DFT in finite-gap systems</summary>
+                                  <p>By admixing a fraction of exact exchange (EXX), hybrid DFT provides a more accurate and reliable description of electronic structure than traditional semi-local DFT (density functional theory). However, the conventional reciprocal-space EXX evaluation is cubic scaling and computationally demanding (typically 10x–100x more expensive than semi-local DFT), which limits the applicability of hybrid DFT. To overcome this bottleneck, we have developed an accurate linear-scaling approach that exploits the sparsity of the EXX interaction using a localized representation of the occupied space. For crystalline systems with general k-point sampling, further optimization can be made to exploit both locality and periodicity.</p>
+                              </details>
+                          </td>
+                            <td>Ju-an Zhang (Cornell)</td>
+                        </tr>
+                        <tr>
+                            <td><b>03/31 (Monday)</b></td>
+                            <td>
+                              <details>
+                                  <summary>Algebraic Varieties Arising in Second Quantization</summary>
+                                  <p>We develop algebraic geometry for coupled cluster theory using second quantization. The high-dimensional eigenvalue problems that encode the electronic Schrödinger equation are approximated by a hierarchy of polynomial systems at various levels of truncation. The truncated eigenstates parametrize well known varieties such as the Grassmannian, flag varieties and spinor varieties. We will offer a detailed study into the truncation varieties. Additionally in second quantization we work within the exterior algebra. There we can define interior and exterior operators called the creation and annihilation operators. They span a special Clifford algebra called the Fermi-Dirac algebra, which we will study as well.</p>
+                              </details>
+                          </td>
+                            <td><a href="https://math.berkeley.edu/~svala/" target="_blank">Svala Sverrisdóttir</a> (Berkeley)</td>
+                        </tr>
+                        <tr>
+                            <td>04/03</td>
+                            <td>
+                              <details>
+                                  <summary>Inferring the number of active molecular motors on a cargo from cargo trajectories</summary>
+                                  <p>To function, cells must move material internally. This intracellular transport is achieved by molecular motors, which transport vesicle-bound cargo along protein filaments. In vitro experiments have uncovered the mechanochemistry of how single, isolated motors turn chemical energy into mechanical work as they "walk" along a protein filament. In cells, however, multiple motors transport cargo. Some of these motors bind to the protein filament and contribute to cargo transport; others diffuse over the surface of the cargo, and the motors transition between the two roles. It is a challenge to experimentally determine the number of motors on a given cargo, let alone the time-varying number of these motors bound to the protein filament. To address this, we developed a method to estimate the number of motors and the number of filament-bound motors from position-time measurements of the cargo. The method uses our knowledge of the mechanics of the system and the mechanochemistry of the motors to infer the most likely number of all motors on the cargo and of filament-bound motors.</p>
+                              </details>
+                          </td>
+                            <td><a href="https://yonatan235.github.io/" target="_blank">Yonatan Ashenafi</a> (WPI)</td>
+                        </tr>
+                        <tr>
+                            <td>04/10</td>
+                            <td>
+                              <details>
+                                  <summary>Neighbor-Sampling Based Adam-Type Stochastic Methods for Training Graph Neural Networks</summary>
+                                  <p>Graph convolutional networks (GCNs) are a powerful tool for graph representation learning. Due to the recursive neighborhood aggregations employed by GCNs, efficient training methods suffer from a lack of theoretical guarantees or are missing important practical elements from modern deep learning algorithms, such as adaptivity and momentum. We present several neighbor-sampling (NS) based Adam-type stochastic methods for solving a nonconvex GCN training problem. We utilize the control variate technique proposed by  [Chen et al., 2017]  to reduce the stochastic error caused by neighbor sampling. Under standard assumptions for Adam-type methods, we show that our methods enjoy the optimal convergence rate. In addition, we conduct extensive numerical experiments on node classification tasks with several benchmark datasets. The results demonstrate superior performance of our methods over classic NS-based SGD that also uses the control-variate technique, especially for large-scale graph datasets.</p>
+                              </details>
+                          </td>
+                            <td>Molly Noel</td>
+                        </tr>
+                        <tr>
+                            <td>04/17</td>
+                            <td>
+                              <details>
+                                  <summary>Algorithmic Designs to Investigate Trustworthiness in Machine Learning Models</summary>
+                                  <p>With the surge of AI models in everyday use, examining the trustworthiness of these models remains a crucial concern. Trustworthiness is defined by several key factors: vulnerabilities inherent in the model architecture that can be exploited by adversaries, leading to faulty model use; vulnerabilities in the training data that result in unfair demographic biases, along with mechanisms to mitigate these biases; and latent representations of models that can be used to recover sensitive training information. This presentation will explore these aspects in depth, discussing how adversarial attacks can compromise model integrity, the impact of biased training data on model fairness, and the risks associated with extracting sensitive information from model representations. Additionally, we will examine algorithmic strategies designed to enhance the robustness and fairness of machine learning models, ensuring their reliability and ethical deployment in real-world applications.</p>
+                              </details>
+                          </td>
+                            <td>Huzaifa Arif (RPI ECSE)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            </details>
+
+
+        </div>
+    </body>
+</html>
