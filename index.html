@@ -101,6 +101,13 @@
         padding: 2px 8px;
     }
 
+    .preview {
+        width: 80%; 
+        min-height: 3em;
+        border: 1px solid rgb(90,90,90);
+        padding: 8px;
+    }
+
     #abstract button {
         background: rgb(10, 10, 10);
         color: white;
@@ -121,6 +128,12 @@ window.addEventListener("load", function() {
   const form = document.getElementById('abstract');
   form.addEventListener("submit", function(e) {
     e.preventDefault();
+
+    const check = document.getElementById('Instruction');
+    if (!check.checked) {
+        alert("please read the speaker instruction.")
+        return 
+    }
     const data = new FormData(form);
     const action = e.target.action;
     fetch(action, {
@@ -337,13 +350,40 @@ window.addEventListener("load", function() {
                 <input  style="width: 80%;" type="text" name="Title" value="" required> <br>
                 
                 <p>Abstract</p>
-                <textarea id="latexInput" style="width: 80%;" rows="16" type="message" name="Abstract" required>\(i\hbar \frac{\partial}{\partial t} \psi = H \psi\)</textarea>
+                <textarea id="latexInput" style="width: 80%;" rows="16" type="message" name="Abstract" maxlength="1000" required>\(\LaTeX\) is supported: \(i\hbar \frac{\partial}{\partial t} \psi = H \psi\).</textarea>
+                <div id="characterCount"></div>
 
                 <p>Preview</p>
 
-                <div id="latexPreview" style="width: 80%; min-height: 2em; border: 1px solid rgb(90,90,90);"></div>
+                <div id="latexPreview" class="preview"></div>
 
-                <br>
+                <p>Special Request (optional)</p>
+                <textarea style="width: 80%;" rows="4" type="message" name="Request" maxlength="1000"></textarea>
+
+                    <div style="width: 80%">
+                        
+                        <p><b> Speaker instruction </b></p>
+                    <p>The seminar takes the following structure.</p>
+                     
+                    <div style="display:flex;">
+                        <span style="flex: 4; border: 1px solid rgb(120,120,120); padding: 8px;">40 mins: talk</span>
+                        <span style="flex: 1; border: 1px solid rgb(120,120,120); padding: 8px;">10 mins: Q & A</span>
+                        <span style="flex: 2; border: 1px solid rgb(120,120,120); padding: 8px;">\(\infty\) mins: food</span>
+                    </div>
+
+                    <p>
+                            Because our intended audience is primarily junior
+                            graduate students, we strongly encourage the
+                            speakers to spend the first 20 mins on teaching the
+                            background of their field of research and actively
+                            soliciting for questions.  The other 20 mins is at
+                            the free disposal of the speakers.
+                    </p>
+
+
+                    </div>
+
+                <input type="checkbox" id="Instruction" name="Instruction" value="Bike"><label for="Instruction" required> I have read the speaker suggestions.</label><br>
 
                 <button type="submit">Submit</button>
             </form>
