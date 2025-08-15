@@ -4,7 +4,16 @@
         <title>Math Frontier Seminar, RPI</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" integrity="sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+    <script defer src="./render_math.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap" rel="stylesheet">
     </head>
     <style type="text/css">
@@ -334,17 +343,6 @@ window.addEventListener("load", function() {
 
                 <div id="latexPreview" style="width: 80%; min-height: 2em; border: 1px solid rgb(90,90,90);"></div>
 
-                <script>
-                    const latexInput = document.getElementById('latexInput');
-                    const latexPreview = document.getElementById('latexPreview');
-                    latexPreview.innerHTML = latexInput.value; 
-                    MathJax.typeset()
-
-                    latexInput.addEventListener('input', () => {
-                        latexPreview.innerHTML = latexInput.value; 
-                        MathJax.typeset()
-                    });
-                </script>
                 <br>
 
                 <button type="submit">Submit</button>
