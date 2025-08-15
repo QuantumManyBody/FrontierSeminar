@@ -4,6 +4,7 @@
         <title>Math Frontier Seminar, RPI</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap" rel="stylesheet">
     </head>
     <style type="text/css">
@@ -20,8 +21,9 @@
         margin: 1em 2em;
     }
     h1 {
-        font-size: 2.4em;
-        text-shadow: 2px 2px 10px rgb(23, 233, 92);
+        font-size: 2.8em;
+        font-weight: normal;
+        text-shadow: 1px 1px 10px rgb(23, 233, 92);
     }
     h2, h3 {
         font-size: 1.8em;
@@ -31,18 +33,18 @@
         color: white;
     }
 
-    table {
+    .schedule {
         border-collapse: collapse;
         margin: 1em 0em;
     }
-    th, td {
+    .schedule th, .schedule td {
         border: 1px solid rgb(80,80,80);
         padding: 8px;
     }
-    tr:nth-child(even) td {
+    .schedule tr:nth-child(even) {
         background: rgb(20,20,20);
     }
-    tr:hover td {
+    .schedule tr:hover {
         background: rgb(40, 40, 40);
     }
     details {
@@ -55,7 +57,7 @@
 
     .notice {
         border-left: 6px solid white;
-        padding-left: 1em;
+        padding-left: 0.4em;
     }
     .tabs {
         display: flex;
@@ -76,58 +78,117 @@
         background: rgb(10,10,10);
         border-bottom: none;
     }
+
+    .contact tr td:first-child{
+        padding-right: 12px;
+    }
+
+
+    #abstract input, textarea{
+        background: rgb(10, 10, 10);
+        color: white;
+        font-size: 1em;
+        padding: 2px 8px;
+    }
+
+    #abstract button {
+        background: rgb(10, 10, 10);
+        color: white;
+        font-size: 1em;
+        margin-top: 1em;
+        padding: 8px;
+        border: none;
+        border-top: 2px solid white;
+    }
+    #abstract button:hover {
+        background: white;
+        color: black;
+    }
+
     </style>
+<script>
+window.addEventListener("load", function() {
+  const form = document.getElementById('abstract');
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const action = e.target.action;
+    fetch(action, {
+      method: 'POST',
+      body: data,
+    })
+    .then(() => {
+      alert("Submission has been received and is under review.");
+    })
+  });
+});
+</script>
     <body>
         <div class="container">
             <div style="display: flex; justify-content: space-between; margin-bottom: 6em;">
                 <div>
                     <h1 style="margin: 0em;">Math Frontier Seminar</h1>
-                    <p style=>Department of Mathematical Sciences</p>
-                    <p style="margin: 0.2em 0em">TBA @ TBA</p>
-                    <div class="notice">Notice: Dr. Sottile's talk will be on 09/29 (Tuesday)</div>
+                    <p style="margin-top: 0.2em;">Department of Mathematical Sciences</p>
+                    <p style="margin: 0.2em 0em">Amos Eaton 216 @ 4:00pm-5:00pm EST, Mondays</p>
+                    <div class="notice">Note: Dr. Sottile's talk will be on 09/29 (Tuesday)</div>
                 </div>
                 <image id="rpi" style="width: auto; height:3em; margin: 1em;" src="./logo.png" alt="">
             </div>
 
 
-            <div style="margin-bottom: 4em;">
-                <p>
-                    This seminar is a flatform for math students to showcase their 
-                    research and to learn from people who work on real applications.
-                    <b>All are welcome</b>, and there shall be food.</p>
+            <div style="margin-bottom: 6em;">
+                <p style="margin-bottom: 6em;">
+                    This seminar is a venue for math students to communicate
+                    applied research, to learn from engineers and scientists,
+                    and to dine together. All RPI faculty and students are
+                    welcome.
+                </p>
 
                     <div style="display: flex; justify-content: right;">
                     <div>
-                        
-                        <p>Organizers:</p>
-                        <div>
-                            <div>
-                                <span>Chair:</span>
-                                    Chanaka D. Mapa Mudiyanselage
-                            </div>
-                            <div>
-                                <span>Co-Chair:</span>
+                        <table class="contact">
+                            <tr>
+                                <td style="vertical-align: top">Chair </td>
+                                <td>Chanaka D. Mapa Mudiyanselage <br> 
                                     Correy Currun
-                            </div>
-                            <div>
-                                <span>Mentor:</span>
-                                    Prof. Fabian M. Faulstich
-                            </div>
+                                </td>
+                            </tr>
+                            <!-- <tr>
+                                <td>Lobbyist: </td><td>Dr. Kangbo Li</td>
+                            </tr> -->
+                            <tr>
+                                <td>Advisor </td>
+                                <td>Prof. Fabian M. Faulstich </td>
+                            </tr>
+
+                            <tr>
+                                <td style="vertical-align: top">Contact </td>
+                                <td>
+                                    <div style="margin-bottom: 0.2em;">
+                                        
+                                    Chanaka Mapa (logistics)<br>
+                                    <a href="mailto:mapamc@rpi.edu">mapamc@rpi.edu</a><br>
+                                    </div>
+                                    <div>
+                                        
+                                    Kangbo Li (sponsorship)<br>
+                                    <a href="mailto:lik17@rpi.edu">lik17@rpi.edu</a>
+                                    </div>
+ 
+                                </td>
+                            </tr>
+
+                        </table>
                         </div>
-                    </div>
                 </div>
             </div>
-
             
-            <h2>Schedule (F25)</h2>
-            <div class="tab-content active" id="content-fall">
-                <!-- Fall 2025 semester-section -->
-                <div class="semester-section">
-                    
-                    <table>
+            <div style="margin-bottom: 6em;">
+            <h2>Schedule</h2>
+                    <table class="schedule">
                         <tr>
-                            <th style="width:10%">Date</th>
-                            <th style="width:65%">Title <span>(click for abstract)</span></th>
+                            <th>Date</th>
+                            <th>Title <span>(click for abstract)</span></th>
                             <th>Speaker</th>
                         </tr>
                         <tr>
@@ -144,8 +205,8 @@
                             <td>09/15</td>
                             <td>
                                 <details>
-                                    <summary style="font-weight:400;">TBA</summary>
-                                    <p style="font-weight:400;">TBA</p>
+                                    <summary>TBA</summary>
+                                    <p>TBA</p>
                                 </details>
                             </td>
                             <td>Jack Mandell (Tentative)</td>
@@ -154,8 +215,8 @@
                             <td>09/22</td>
                             <td>
                                 <details>
-                                    <summary style="font-weight:400;">CTSuggest: An LLM-powered Open Source Application to support Clinical Trial Design by Suggesting Baseline Features</summary>
-                                    <p style="font-weight:400;">The specification of potentially confounding baseline features or covariates is a crucial step in the design of prospective and retrospective clinical trials. Baseline features are critical for ensuring the integrity of the study design, the validity of the results, and the generalizability of the findings. We introduce CTSuggest, an application leveraging large language models (LLMs) to generate baseline features as part of the clinical trial design process. Users first specify basic trial metadata, and then CTSuggest suggests appropriate features with an explanation for each feature. Users can create an entirely new trial or start with metadata from an existing trial from ClinicalTrials.gov. We perform experiments validating the quality of CTSuggest’s baseline features using the benchmark CT-Pub dataset taken from clinical trial publications and evaluating using the “LLM-as-a-Judge” (LaaJ) framework provided in the CTBench benchmark. The results show that the feature suggestions generated by the state-of-the-art GPT-4o model meet or exceed the previously published CTBench results. We also show the promise of using a smaller open-source Llama model. Additionally, we examine the reliability of LaaJ evaluation within this setting. Coherence checking revealed hallucinations in the LaaJ’s evaluation, necessitating a postprocessing correction step that yielded lower but more accurate performance metrics. Three different types of hallucination were observed. The hallucination rate provides a quantifiable coherence metric that can be systematically used to improve LaaJ reliability. Our findings underscore the challenges in developing reliable LLM evaluation methods in healthcare applications and demonstrate a potential framework for improving LaaJ systems.</p>
+                                    <summary>CTSuggest: An LLM-powered Open Source Application to support Clinical Trial Design by Suggesting Baseline Features</summary>
+                                    <p>The specification of potentially confounding baseline features or covariates is a crucial step in the design of prospective and retrospective clinical trials. Baseline features are critical for ensuring the integrity of the study design, the validity of the results, and the generalizability of the findings. We introduce CTSuggest, an application leveraging large language models (LLMs) to generate baseline features as part of the clinical trial design process. Users first specify basic trial metadata, and then CTSuggest suggests appropriate features with an explanation for each feature. Users can create an entirely new trial or start with metadata from an existing trial from ClinicalTrials.gov. We perform experiments validating the quality of CTSuggest’s baseline features using the benchmark CT-Pub dataset taken from clinical trial publications and evaluating using the “LLM-as-a-Judge” (LaaJ) framework provided in the CTBench benchmark. The results show that the feature suggestions generated by the state-of-the-art GPT-4o model meet or exceed the previously published CTBench results. We also show the promise of using a smaller open-source Llama model. Additionally, we examine the reliability of LaaJ evaluation within this setting. Coherence checking revealed hallucinations in the LaaJ’s evaluation, necessitating a postprocessing correction step that yielded lower but more accurate performance metrics. Three different types of hallucination were observed. The hallucination rate provides a quantifiable coherence metric that can be systematically used to improve LaaJ reliability. Our findings underscore the challenges in developing reliable LLM evaluation methods in healthcare applications and demonstrate a potential framework for improving LaaJ systems.</p>
                                 </details>
                             </td>
                             <td>Correy Currun (Tentative)</td>
@@ -164,8 +225,8 @@
                             <td><b>09/30 (Tuesday)</b></td>
                             <td>
                                 <details>
-                                    <summary style="font-weight:400;">TBA</summary>
-                                    <p style="font-weight:400;">TBA</p>
+                                    <summary>TBA</summary>
+                                    <p>TBA</p>
                                 </details>
                             </td>
                             <td><a href="https://franksottile.github.io/" target="_blank">Dr. Sottile</a> (Texas A&amp;M)</td>
@@ -174,8 +235,8 @@
                             <td>10/06</td>
                             <td>
                                 <details>
-                                    <summary style="font-weight:400;">TBA</summary>
-                                    <p style="font-weight:400;">TBA</p>
+                                    <summary>TBA</summary>
+                                    <p>TBA</p>
                                 </details>
                             </td>
                             <td>Drake Clark (U. Minnesota)</td>
@@ -189,8 +250,8 @@
                             <td>10/20</td>
                             <td>
                                 <details>
-                                    <summary style="font-weight:400;">A Multi-Frequency Helmholtz Solver Based on the WaveHoltz Algorithm</summary>
-                                    <p style="font-weight:400;">We develop and analyze a new approach for simultaneously computing multiple solutions to the Helmholtz
+                                    <summary>A Multi-Frequency Helmholtz Solver Based on the WaveHoltz Algorithm</summary>
+                                    <p>We develop and analyze a new approach for simultaneously computing multiple solutions to the Helmholtz
                                     equation for different frequencies and different forcing functions. The new Multi-Frequency WaveHoltz
                                     (MFWH) algorithm is an extension of the original WaveHoltz method and both are based on time-filtering
                                     solutions to an associated wave-equation. With MFWH, the different Helmholtz solutions are computed
@@ -208,8 +269,8 @@
                             <td>10/27</td>
                             <td>
                                 <details>
-                                    <summary style="font-weight:400;">TBA</summary>
-                                    <p style="font-weight:400;">TBA</p>
+                                    <summary>TBA</summary>
+                                    <p>TBA</p>
                                 </details>
                             </td>
                             <td>Zihan Nie (Tentative)</td>
@@ -218,8 +279,8 @@
                             <td>11/03</td>
                             <td>
                                 <details>
-                                    <summary style="font-weight:400;">TBA</summary>
-                                    <p style="font-weight:400;">TBA</p>
+                                    <summary>TBA</summary>
+                                    <p>TBA</p>
                                 </details>
                             </td>
                             <td><a href="https://heshandevaka.github.io/" target="_blank">Heshan Fernando</a> (RPI ECSE)</td>
@@ -228,8 +289,8 @@
                             <td>11/10</td>
                             <td>
                                 <details>
-                                    <summary style="font-weight:400;">Canonical Polyadic Decomposition for efficient Electron Correlation Methods</summary>
-                                    <p style="font-weight:400;">TBA</p>
+                                    <summary>Canonical Polyadic Decomposition for efficient Electron Correlation Methods</summary>
+                                    <p>TBA</p>
                                 </details>
                             </td>
                             <td>Talha Aziz</td>
@@ -238,25 +299,57 @@
                             <td>11/17</td>
                             <td>
                                 <details>
-                                    <summary style="font-weight:400;">TBA</summary>
-                                    <p style="font-weight:400;">TBA</p>
+                                    <summary>TBA</summary>
+                                    <p>TBA</p>
                                 </details>
                             </td>
                             <td>Liangliang(Lia) Zhang (RPI CS)(Tentative)</td>
                         </tr>
                     </table>
-                </div>
             </div>
 
-            <div style="display:flex; justify-content: right; margin: 2em 0em;">
-                <div>
-                    Interested in sponsoring us?<br>
-                    Please contact Chanaka Mapa at <a href="mailto:mapamc@rpi.edu">mapamc@rpi.edu</a>
-                </div>
+            <div style="margin-bottom: 6em;">
+            <h2>Submit an Abstract for Fall 25</h2>
+            <form id="abstract"
+                method="POST"
+                action="https://script.google.com/macros/s/AKfycbwjlV3JWnZ6aUAOr7kLYzmQvvNdZaMBwM2GmnCLaKr1HQO569AdCKtMMwldIGMDti25/exec">
+
+                <p>Name</p>
+                <input type="text" name="Name" value="" required> <br>
+
+                <p>Email</p>
+                <input type="email" name="Email" value="" required> <br>
+
+                <p>Affiliation</p>
+                <input style="width: 80%;" type="text" name="Affiliation" value="Department of Mathematical Sciences, Rensselaer Polytechnic Institute" required> <br>
+
+                <p>Title</p>
+                <input  style="width: 80%;" type="text" name="Title" value="" required> <br>
+                
+                <p>Abstract</p>
+                <textarea id="latexInput" style="width: 80%;" rows="16" type="message" name="Abstract" required>\(i\hbar \frac{\partial}{\partial t} \psi = H \psi\)</textarea>
+
+                <p>Preview</p>
+
+                <div id="latexPreview" style="width: 80%; min-height: 2em; border: 1px solid rgb(90,90,90);"></div>
+
+                <script>
+                    const latexInput = document.getElementById('latexInput');
+                    const latexPreview = document.getElementById('latexPreview');
+                    latexPreview.innerHTML = latexInput.value; 
+                    MathJax.typeset()
+
+                    latexInput.addEventListener('input', () => {
+                        latexPreview.innerHTML = latexInput.value; 
+                        MathJax.typeset()
+                    });
+                </script>
+                <br>
+
+                <button type="submit">Submit</button>
+            </form>
             </div>
 
-
-            <hr>
 
             <h2>Previous Talks</h2>
             <!-- Tab content: Spring 2025 -->
@@ -290,7 +383,7 @@
                         </div> -->
                     </div>
                     
-                    <table>
+                    <table class="schedule">
                         <tr>
                             <th style="width:10%">Date</th>
                             <th style="width:65%">Title <span style="color:#fff;font-weight:400;">(click for abstract)</span></th>
