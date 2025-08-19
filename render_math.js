@@ -11,3 +11,13 @@ latexInput.addEventListener('input', () => {
     renderMathInElement(document.body)
     characterCount.textContent = `count: ${latexInput.value.length}/1000`; 
 });
+
+
+const biography = document.getElementById('biography');
+const bioCount = document.getElementById('bioCount');
+
+
+bioCount.textContent = `count: ${biography.value.length}/200`; 
+biography.addEventListener('input', () => {
+    bioCount.textContent = `count: ${biography.value.length}/200`; 
+});

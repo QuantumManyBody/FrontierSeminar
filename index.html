@@ -102,10 +102,10 @@
     }
 
     .preview {
-        width: 80%; 
         min-height: 3em;
         border: 1px solid rgb(90,90,90);
         padding: 8px;
+        margin-left: 1em;
     }
 
     #abstract button {
@@ -343,6 +343,9 @@ window.addEventListener("load", function() {
                 <p>Email</p>
                 <input type="email" name="Email" value="" required> <br>
 
+                <p>Webpage (optional)</p>
+                <input type="url" name="Web" value=""> <br>
+
                 <p>Affiliation</p>
                 <input style="width: 80%;" type="text" name="Affiliation" value="Department of Mathematical Sciences, Rensselaer Polytechnic Institute" required> <br>
 
@@ -350,15 +353,22 @@ window.addEventListener("load", function() {
                 <input  style="width: 80%;" type="text" name="Title" value="" required> <br>
                 
                 <p>Abstract</p>
-                <textarea id="latexInput" style="width: 80%;" rows="16" type="message" name="Abstract" maxlength="1000" required>\(\LaTeX\) is supported: \(i\hbar \frac{\partial}{\partial t} \psi = H \psi\).</textarea>
-                <div id="characterCount"></div>
+                    <div style="width: 80%; display: flex; justify-content: space-between;">
+                        
+                            <textarea style="flex:1;"
+                                id="latexInput" rows="16" type="message" name="Abstract" maxlength="1000" required>\(\LaTeX\) is supported: \(i\hbar \frac{\partial}{\partial t} \psi = H \psi\).</textarea>
+                        <div style="flex: 1;" id="latexPreview" class="preview"></div>
+                    </div>
+                    <div id="characterCount"></div>
 
-                <p>Preview</p>
-
-                <div id="latexPreview" class="preview"></div>
+                <p>Bio (optional)</p>
+                <textarea style="width: 80%;" id = "biography" rows="4" type="message" name="Bio" maxlength="200"></textarea>
+                <div id="bioCount"></div>
+                <!-- <p>Speaker Photo (optional)</p>
+                <input type="file" id="photo_upload" name="Photo"> -->
 
                 <p>Special Request (optional)</p>
-                <textarea style="width: 80%;" rows="4" type="message" name="Request" maxlength="1000"></textarea>
+                <textarea style="width: 80%;" rows="4" type="message" name="Comment" maxlength="1000"></textarea>
 
                     <div style="width: 80%">
                         
