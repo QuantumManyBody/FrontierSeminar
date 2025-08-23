@@ -1,0 +1,93 @@
+html, body {
+    width: 215.9mm;
+    height: 279.4mm;
+    /* border: 1px solid; */
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+
+h1, h2, h3 {
+    font-weight: normal;
+    font-size: 14pt;
+}
+
+body {
+    font-family: 'Geist', sans-serif;
+    font-size: 14pt;
+    
+}
+#flyer {
+    padding: 1em 2em;
+}
+
+#title, #speaker-name {
+    font-size: 24pt;
+}
+
+#title, h3 {
+    text-align: center;
+}
+
+#speaker-block{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1cm;
+    height: 6cm;
+}
+
+#info-block{
+    display: flex;
+    flex-direction: column;
+}
+
+#speaker-image{
+    overflow: auto;
+    box-shadow: 6px 6px;
+}
+#speaker-photo{
+    height: 100%;
+    float: right;
+}
+
+
+#venue-block {
+    margin-top: auto;
+}
+
+#top-bar{
+    display: flex;
+    height: 1.5cm;
+}
+
+#bottom {
+    position: absolute;
+    bottom: 0cm;
+    left: 0cm;
+    /* background: rgb(0, 80, 20); */
+    height: 0.4cm;
+    width: 100%;
+	background:
+		  conic-gradient(at 62.5% 12.5%, #000000 25%, #0000 0) calc(16px/-8) calc(16px/2),
+		  conic-gradient(at 62.5% 12.5%, #000000 25%, #0000 0) calc(-3*16px/8) calc(16px/4),
+		  conic-gradient(at 87.5% 62.5%, #000000 25%, #0000 0) calc(3*16px/8) calc(16px/4),
+		  conic-gradient(at 87.5% 62.5%, #000000 25%, #0000 0) calc(16px/-8) 0,
+		  conic-gradient(at 25% 12.5%, #000000 25%, #0000 0) 0 calc(16px/-4),
+		  conic-gradient(at 25% 12.5%, #000000 25%, #0000 0) calc(16px/-4) 0,
+		  conic-gradient(at 87.5% 87.5%, #000000 25%, #0000 0) calc(16px/8) 0 #ffffff;
+	background-size: 16px 16px;
+}
+
+.banner {
+    background: black;
+    color: white;
+    align-content: center;
+    padding-left: 1em;
+}
+
+#logo {
+    flex: 1.2;
+    padding:0.2em; 
+}
+

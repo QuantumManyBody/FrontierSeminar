@@ -132,7 +132,7 @@ window.addEventListener("load", function() {
     const check = document.getElementById('Instruction');
     if (!check.checked) {
         alert("please read the speaker instruction.")
-        return 
+        return
     }
     const data = new FormData(form);
     const action = e.target.action;
@@ -172,7 +172,7 @@ window.addEventListener("load", function() {
                         <table class="contact">
                             <tr>
                                 <td style="vertical-align: top">Chair </td>
-                                <td><a href="https://chanakadilshanmapa.github.io/" target="_blank">Chanaka D. Mapa Mudiyanselage</a><br> 
+                                <td><a href="https://chanakadilshanmapa.github.io/" target="_blank">Chanaka D. Mapa Mudiyanselage</a><br>
                                     Correy Currun
                                 </td>
                             </tr>
@@ -188,16 +188,16 @@ window.addEventListener("load", function() {
                                 <td style="vertical-align: top">Contact </td>
                                 <td>
                                     <div style="margin-bottom: 0.2em;">
-                                        
+
                                     Chanaka Mapa (logistics)<br>
                                     <a href="mailto:mapamc@rpi.edu">mapamc@rpi.edu</a><br>
                                     </div>
                                     <div>
-                                        
+
                                     Kangbo Li (sponsorship)<br>
                                     <a href="mailto:lik17@rpi.edu">lik17@rpi.edu</a>
                                     </div>
- 
+
                                 </td>
                             </tr>
 
@@ -205,7 +205,7 @@ window.addEventListener("load", function() {
                         </div>
                 </div>
             </div>
-            
+
             <div style="margin-bottom: 6em;">
             <h2>Schedule</h2>
                     <table class="schedule">
@@ -214,16 +214,21 @@ window.addEventListener("load", function() {
                             <th>Title <span>(click for abstract)</span></th>
                             <th>Speaker</th>
                         </tr>
-                        <tr>
+                        <tr id="jmandell">
                             <td>09/08</td>
                             <td>
                                 <details>
                                     <summary>Realizing Quantum Dynamical Phase Transitions on IBM Quantum Computers</summary>
                                     <p>Quantum Dynamical Phase Transitions (DPTs) are a framework to understand how quantum systems evolve over time. Due to the high circuit depth needed for accurate time evolution of large-scale quantum systems on digital quantum computers, DPTs have been mostly investigated on analog quantum simulators (ex: trapped-ion) on large 1D systems and small 2D systems. Utilizing the lower circuit depth provided by fractional-gate equipped IBM quantum computers, we realize DPTs by applying quantum quenches of large 2D Transverse Field Ising Models with hardware-native geometry. Experimental results on real quantum hardware demonstrate that fractional gates outperform standard basis gates and DPTs can be realized for large 2D systems (156 qubits). Note: All necessary background knowledge will be built up, so anyone that is interested in quantum computing is invited to attend. </p>
+                                <p>
+                                </p>
                                 </details>
                             </td>
-                            <td>Jack Mandell</td>
-                        </tr> 
+                            <td>
+                            <span>Jack Mandell </span>
+                            <span class="affiliation">/RPI Math</span>
+                            </td>
+                        </tr>
                         <tr>
                             <td>09/15</td>
                             <td>
@@ -242,7 +247,7 @@ window.addEventListener("load", function() {
                                 </details>
                             </td>
                             <td>Francis Appiah</td>
-                        </tr> 
+                        </tr>
                         <tr>
                             <td>09/22</td>
                             <td>
@@ -252,7 +257,7 @@ window.addEventListener("load", function() {
                                 </details>
                             </td>
                             <td><a href="https://liangliang6v6.github.io/" target="_blank">Liangliang(Lia) Zhang</a> (RPI CS)</td>
-                        </tr>                              
+                        </tr>
                         <tr>
                             <td><b>09/30 (Tuesday)</b></td>
                             <td>
@@ -277,7 +282,7 @@ window.addEventListener("load", function() {
                             <td>10/13</td>
                             <td>Columbus Day: <b>No Seminar</b></td>
                             <td></td>
-                        </tr> 
+                        </tr>
                         <tr>
                             <td>10/20</td>
                             <td>
@@ -287,7 +292,7 @@ window.addEventListener("load", function() {
                                 </details>
                             </td>
                             <td>Correy Currun (Tentative)</td>
-                        </tr>                       
+                        </tr>
                         <tr>
                             <td>10/27</td>
                             <td>
@@ -317,7 +322,7 @@ window.addEventListener("load", function() {
                                 </details>
                             </td>
                             <td>Talha Aziz</td>
-                        </tr>                        
+                        </tr>
                         <tr>
                             <td>11/17</td>
                             <td>
@@ -327,7 +332,7 @@ window.addEventListener("load", function() {
                                 </details>
                             </td>
                             <td>Zachery Wolski (Tentative)</td>
-                        </tr> 
+                        </tr>
                     </table>
             </div>
 
@@ -351,10 +356,10 @@ window.addEventListener("load", function() {
 
                 <p>Title</p>
                 <input  style="width: 80%;" type="text" name="Title" value="" required> <br>
-                
+
                 <p>Abstract</p>
                     <div style="width: 80%; display: flex; justify-content: space-between;">
-                        
+
                             <textarea style="flex:1;"
                                 id="latexInput" rows="16" type="message" name="Abstract" maxlength="1000" required>\(\LaTeX\) is supported: \(i\hbar \frac{\partial}{\partial t} \psi = H \psi\).</textarea>
                         <div style="flex: 1;" id="latexPreview" class="preview"></div>
@@ -371,10 +376,10 @@ window.addEventListener("load", function() {
                 <textarea style="width: 80%;" rows="4" type="message" name="Comment" maxlength="1000"></textarea>
 
                     <div style="width: 80%">
-                        
+
                         <p><b> Speaker instruction </b></p>
                     <p>The seminar takes the following structure.</p>
-                     
+
                     <div style="display:flex;">
                         <span style="flex: 4; border: 1px solid rgb(120,120,120); padding: 8px;">40 mins: talk</span>
                         <span style="flex: 1; border: 1px solid rgb(120,120,120); padding: 8px;">10 mins: Q & A</span>
@@ -387,7 +392,7 @@ window.addEventListener("load", function() {
                             speakers to spend the first 20 mins on teaching the
                             background of their field of research and actively
                             soliciting for questions.  The other 20 mins is at
-                            the free disposal of the speakers. 
+                            the free disposal of the speakers.
                     </p>
 
 
@@ -431,7 +436,7 @@ window.addEventListener("load", function() {
                             • <a href="https://math.berkeley.edu/~svala/" target="_blank" style="color:#22223b;text-decoration:underline;">Svala Sverrisdottir</a>'s talk was on 03/31 (Monday) from 4:00PM - 5:00PM @ AE215
                         </div> -->
                     </div>
-                    
+
                     <table class="schedule">
                         <tr>
                             <th style="width:10%">Date</th>
