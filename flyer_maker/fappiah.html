@@ -1,0 +1,54 @@
+<!DOCTYPE html><html><head>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+    </head>
+    <body>
+        <div id="top-bar">
+            <span class="banner" style="flex: 8;">MATH FRONTIER SEMINAR</span>
+            <img id="logo" src="./RPI_Logo_Default.svg" alt="">
+            <span class="banner" style="flex: 1;"></span>
+        </div>
+
+        <div id="flyer">
+        
+        <h1 id="title">A Multi-Frequency Helmholtz Solver Based on the WaveHoltz Algorithm</h1>
+        <div id="speaker-block">
+                <div id="speaker-image"><img src="speaker_photos/fappiah.jpeg" id="speaker-photo" alt="photo of Francis Appiah"></div>
+
+                <div id="info-block">
+                    <span id="speaker-name">Francis Appiah</span>
+                    <span id="affiliation">RPI Math</span>
+
+                    <div id="venue-block">
+                        <table>
+                            <tbody><tr><td>Time:</td> <td>4:00 pm, <span id="date">09/15</span></td></tr>
+                            <tr><td>Location:</td> <td>Amos Eaton 217</td> </tr>
+                            <tr><td>Food:</td> <td id="food"></td></tr>
+                        </tbody></table>
+                    </div>
+                </div>
+        </div>
+
+
+        <div style="margin-top: 1em;">
+            <h3 style="border-bottom: 4px solid black; padding-bottom:4pt;">Abstract</h3>
+            <p id="abstract">We develop and analyze a new approach for simultaneously computing multiple solutions to the Helmholtz
+                                    equation for different frequencies and different forcing functions. The new Multi-Frequency WaveHoltz
+                                    (MFWH) algorithm is an extension of the original WaveHoltz method and both are based on time-filtering
+                                    solutions to an associated wave-equation. With MFWH, the different Helmholtz solutions are computed
+                                    simultaneously by solving a single wave equation combined with multiple time filters. The MFWH algorithm
+                                    defines a fixed-point iteration which can be accelerated with Krylov methods such as GMRES. The solution
+                                    of the wave equation can be efficiently solved with implicit time-stepping using as few as five time-steps per
+                                    period. Discretization errors in time can be completely removed by various adjustments. Numerical results
+                                    are given to confirm the convergence theory when solving energy conserving problems.
+                                    </p>
+        </div>
+
+        
+        </div>
+        <div id="bottom">
+            
+        </div>
+    
+    
+
+</body></html>

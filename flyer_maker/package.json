@@ -1,7 +1,7 @@
 {
-  "name": "poster",
+  "name": "flyer",
   "version": "1.0.0",
-  "description": "A script for making posters for the Math Frontier Seminar at RPI",
+  "description": "A script for making flyer for the Math Frontier Seminar at RPI",
   "license": "MIT",
   "author": "Kangbo Li",
   "type": "commonjs",
