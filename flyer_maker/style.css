@@ -42,13 +42,9 @@ body {
     flex-direction: column;
 }
 
-#speaker-image{
-    overflow: auto;
-    box-shadow: 6px 6px;
-}
 #speaker-photo{
     height: 100%;
-    float: right;
+    box-shadow: 6px 6px;
 }
 
 
@@ -91,3 +87,6 @@ body {
     padding:0.2em; 
 }
 
+#abstract {
+    text-wrap: pretty;
+}

@@ -47,7 +47,7 @@ picture.src = `speaker_photos/${speaker_id}.jpeg`;
 picture.id = "speaker-photo";
 picture.alt = `photo of ${speaker_name}`;
 // picture.style = `clip-path: rect(${clipping})`;
-flyer_dom.window.document.getElementById("speaker-image").prepend(picture)
+flyer_dom.window.document.getElementById("speaker-block").prepend(picture)
 
 rendered_flyer = flyer_dom.serialize()
 
