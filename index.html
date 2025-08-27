@@ -54,6 +54,14 @@
     .schedule tr:nth-child(even) {
         background: rgb(20,20,20);
     }
+
+    .schedule td:first-child {
+        width: 6em;
+    }
+    .schedule td:last-child {
+        width: 14em;
+    }
+
     .schedule tr:hover {
         background: rgb(40, 40, 40);
     }
@@ -221,8 +229,13 @@ window.addEventListener("load", function() {
                                     <summary class="speaker-title">Realizing Quantum Dynamical Phase Transitions on IBM Quantum Computers</summary>
                                     <p class="speaker-abstract">Quantum Dynamical Phase Transitions (DPTs) are a framework to understand how quantum systems evolve over time. Due to the high circuit depth needed for accurate time evolution of large-scale quantum systems on digital quantum computers, DPTs have been mostly investigated on analog quantum simulators (ex: trapped-ion) on large 1D systems and small 2D systems. Utilizing the lower circuit depth provided by fractional-gate equipped IBM quantum computers, we realize DPTs by applying quantum quenches of large 2D Transverse Field Ising Models with hardware-native geometry. Experimental results on real quantum hardware demonstrate that fractional gates outperform standard basis gates and DPTs can be realized for large 2D systems (156 qubits). Note: All necessary background knowledge will be built up, so anyone that is interested in quantum computing is invited to attend. </p>
                                 <p class="speaker-bio">
+                                    Jack Mandell is a third-year Ph.D. student
+                                    in the RPI Department of Mathematical
+                                    Sciences. His research involves applying
+                                    quantum computing to solve problems in
+                                    optimization and material science.
                                 </p>
-                                <p class="speaker-food">Red Curry</p>
+                                <p class="speaker-food"></p>
                                 </details>
                             </td>
                             <td>
@@ -244,7 +257,9 @@ window.addEventListener("load", function() {
                                     period. Discretization errors in time can be completely removed by various adjustments. Numerical results
                                     are given to confirm the convergence theory when solving energy conserving problems.
                                     </p>
-                                    <p class="speaker-bio"></p>
+                                    <p class="speaker-bio">
+                            Francis Appiah is a third-year Ph.D. student in the Department of Mathematical Sciences at Rensselaer Polytechnic Institute. His research focuses on developing methods to simultaneously solve Helmholtz equations across multiple frequencies and forcing functions.
+                                </p>
                                     <p class="speaker-food"></p>
                                 </details>
                             </td>
@@ -255,8 +270,32 @@ window.addEventListener("load", function() {
                             <td>
                                 <details>
                                     <summary class="speaker-title">Extending Graph Condensation to Multi-Label Datasets</summary>
-                                    <p class="speaker-abstract">Training Graph Neural Networks (GNNs) on large graphs is often hindered by redundancy and high computational demands. Existing graph condensation methods typically target single-label scenarios, but many real-world graphs are multi-label—nodes can belong to multiple classes simultaneously. In this talk, I’ll introduce GCond: a graph condensation framework adapted to the multi-label setting, utilizing K-Center initialization and binary cross-entropy loss. Through experiments on eight real-world multi-label graph datasets, GCond consistently achieves state-of-the-art performance, enhancing both scalability and efficiency for multi-label graph learning.</p>
-                                    <p class="speaker-bio"></p>
+                                    <p class="speaker-abstract">Training Graph
+                                    Neural Networks (GNNs) on large graphs is
+                                    often hindered by redundancy and high
+                                    computational demands. Existing graph
+                                    condensation methods typically target
+                                    single-label scenarios, but many real-world
+                                    graphs are multi-label—nodes can belong to
+                                    multiple classes simultaneously. In this
+                                    talk, I’ll introduce GCond: a graph
+                                    condensation framework adapted to the
+                                    multi-label setting, utilizing K-Center
+                                    initialization and binary cross-entropy
+                                    loss. Through experiments on eight
+                                    real-world multi-label graph datasets,
+                                    GCond consistently achieves
+                                    state-of-the-art performance, enhancing
+                                    both scalability and efficiency for
+                                    multi-label graph learning.</p>
+                                    <p class="speaker-bio">
+Liangliang Zhang is a Ph.D. student in Computer Science at Rensselaer
+                                    Polytechnic Institute, advised by Prof. Yao
+                                    Ma. Her research focuses on graph neural
+                                    networks, multi-label graph learning, and
+                                    efficient algorithms for large-scale graph
+                                    data.
+                                </p>
                                     <p class="speaker-food"></p>
                                 </details>
                             </td>
@@ -271,7 +310,9 @@ window.addEventListener("load", function() {
                                 <details>
                                     <summary class="speaker-title">TBA</summary>
                                     <p class="speaker-abstract">TBA</p>
-                                    <p class="speaker-bio"></p>
+                                    <p class="speaker-bio">
+                                    <a href="https://franksottile.github.io/biography.html">Brief Bio</a> 
+                                </p>
                                     <p class="speaker-food"></p>
                                 </details>
                             </td>
@@ -306,7 +347,7 @@ window.addEventListener("load", function() {
                         </tr>
                         <tr>
                             <td class="speaker-date">10/13</td>
-                            <td>Columbus Day: <b>No Seminar</b></td>
+                            <td>Columbus Day: No Seminar</td>
                             <td></td>
                         </tr>
                         <tr id="ccurrun">
@@ -314,13 +355,68 @@ window.addEventListener("load", function() {
                             <td>
                                 <details>
                                     <summary class="speaker-title">CTSuggest: An LLM-powered Open Source Application to support Clinical Trial Design by Suggesting Baseline Features</summary>
-                                    <p class="speaker-abstract">The specification of potentially confounding baseline features or covariates is a crucial step in the design of prospective and retrospective clinical trials. Baseline features are critical for ensuring the integrity of the study design, the validity of the results, and the generalizability of the findings. We introduce CTSuggest, an application leveraging large language models (LLMs) to generate baseline features as part of the clinical trial design process. Users first specify basic trial metadata, and then CTSuggest suggests appropriate features with an explanation for each feature. Users can create an entirely new trial or start with metadata from an existing trial from ClinicalTrials.gov. We perform experiments validating the quality of CTSuggest’s baseline features using the benchmark CT-Pub dataset taken from clinical trial publications and evaluating using the “LLM-as-a-Judge” (LaaJ) framework provided in the CTBench benchmark. The results show that the feature suggestions generated by the state-of-the-art GPT-4o model meet or exceed the previously published CTBench results. We also show the promise of using a smaller open-source Llama model. Additionally, we examine the reliability of LaaJ evaluation within this setting. Coherence checking revealed hallucinations in the LaaJ’s evaluation, necessitating a postprocessing correction step that yielded lower but more accurate performance metrics. Three different types of hallucination were observed. The hallucination rate provides a quantifiable coherence metric that can be systematically used to improve LaaJ reliability. Our findings underscore the challenges in developing reliable LLM evaluation methods in healthcare applications and demonstrate a potential framework for improving LaaJ systems.</p>
-                                    <p class="speaker-bio"></p>
+                                    <p class="speaker-abstract">The
+                                    specification of potentially confounding
+                                    baseline features or covariates is a
+                                    crucial step in the design of prospective
+                                    and retrospective clinical trials. Baseline
+                                    features are critical for ensuring the
+                                    integrity of the study design, the validity
+                                    of the results, and the generalizability of
+                                    the findings. We introduce CTSuggest, an
+                                    application leveraging large language
+                                    models (LLMs) to generate baseline features
+                                    as part of the clinical trial design
+                                    process. Users first specify basic trial
+                                    metadata, and then CTSuggest suggests
+                                    appropriate features with an explanation
+                                    for each feature. Users can create an
+                                    entirely new trial or start with metadata
+                                    from an existing trial from
+                                    ClinicalTrials.gov. We perform experiments
+                                    validating the quality of CTSuggest’s
+                                    baseline features using the benchmark
+                                    CT-Pub dataset taken from clinical trial
+                                    publications and evaluating using the
+                                    “LLM-as-a-Judge” (LaaJ) framework provided
+                                    in the CTBench benchmark. The results show
+                                    that the feature suggestions generated by
+                                    the state-of-the-art GPT-4o model meet or
+                                    exceed the previously published CTBench
+                                    results. We also show the promise of using
+                                    a smaller open-source Llama model.
+                                    Additionally, we examine the reliability of
+                                    LaaJ evaluation within this setting.
+                                    Coherence checking revealed hallucinations
+                                    in the LaaJ’s evaluation, necessitating a
+                                    postprocessing correction step that yielded
+                                    lower but more accurate performance
+                                    metrics. Three different types of
+                                    hallucination were observed. The
+                                    hallucination rate provides a quantifiable
+                                    coherence metric that can be systematically
+                                    used to improve LaaJ reliability. Our
+                                    findings underscore the challenges in
+                                    developing reliable LLM evaluation methods
+                                    in healthcare applications and demonstrate
+                                    a potential framework for improving LaaJ
+                                    systems.</p>
+                                <p class="speaker-bio">
+Corey Curran is a third-year Ph.D. student in the RPI Department of
+                                    Mathematical Sciences. His research focuses
+                                    on applications of machine learning and
+                                    optimization techniques in medical domains.
+                                    He earned a B.S. in Civil Engineering and
+                                    Mathematics (2022) and an M.S. in Applied
+                                    Mathematics – Data Analytics (2023) from
+                                    Manhattan College, as well as an M.S. in
+                                    Applied Mathematics from RPI (2025).    
+                                </p>
                                     <p class="speaker-food"></p>
                                 </details>
                             </td>
                             <td>
-                            <span class="affiliation">RPI Math</span>/<span class="speaker-name">Correy Currun (Tentative)</span>
+                            <span class="affiliation">RPI Math</span>/<span class="speaker-name">Corey Currun (Tentative)</span>
                         </td>
                         </tr>
                         <tr id="znie">

@@ -24,6 +24,7 @@ body {
 
 #title, #speaker-name {
     font-size: 24pt;
+    text-wrap: balance;
 }
 
 #title, h3 {
@@ -33,7 +34,7 @@ body {
 #speaker-block{
     display: flex;
     justify-content: space-evenly;
-    margin-top: 1cm;
+    margin: 1.2cm 0cm;
     height: 6cm;
 }
 
@@ -90,3 +91,9 @@ body {
 #abstract {
     text-wrap: pretty;
 }
+
+td:first-child {
+    padding-right: 1em;
+}
+
+
