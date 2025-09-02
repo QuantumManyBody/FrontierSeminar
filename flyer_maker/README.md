@@ -7,7 +7,7 @@ Since the code runs on nodejs.
 # Usage
 To make a flyer, in the directory `flyer_maker`, run 
 ```bash
-node flyer_maker.js <speaker_id> <food>
+node flyer_maker.js <speaker_id> 
 ```
 
 The speaker information will be pulled from `index.html`, where
