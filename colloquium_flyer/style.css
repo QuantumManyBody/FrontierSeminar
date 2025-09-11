@@ -1,0 +1,92 @@
+html, body {
+    width: 215.9mm;
+    height: 279.4mm;
+    /* border: 1px solid; */
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+
+h1, h2, h3 {
+    font-weight: normal;
+    font-size: 14pt;
+}
+
+body {
+    font-family: 'Geist', sans-serif;
+    font-size: 14pt;
+    
+}
+#flyer {
+    padding: 1em 2em;
+}
+
+#title, #speaker-name {
+    font-size: 24pt;
+    text-wrap: balance;
+}
+
+#title, h3 {
+    text-align: center;
+}
+
+#speaker-block{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1.2cm 0cm;
+    height: 6cm;
+}
+
+#info-block{
+    display: flex;
+    flex-direction: column;
+}
+
+#speaker-photo{
+    height: 100%;
+    box-shadow: 6px 6px;
+}
+
+
+#venue-block {
+    margin-top: auto;
+}
+
+#top-bar{
+    display: flex;
+    height: 1.5cm;
+    background: rgb(214, 0, 28);
+}
+
+#bottom {
+    position: absolute;
+    bottom: 0cm;
+    left: 0cm;
+    /* background: rgb(0, 80, 20); */
+    height: 0.4cm;
+    width: 100%;
+	background: rgb(214, 0, 28);
+}
+
+.banner {
+    background: rgb(214, 0, 28);
+    color: white;
+    align-content: center;
+    padding-left: 1em;
+    font-size: 1.3em;
+}
+
+#logo {
+    padding: 0.4em;
+}
+
+#abstract {
+    text-wrap: pretty;
+}
+
+td:first-child {
+    padding-right: 1em;
+}
+
+
