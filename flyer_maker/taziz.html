@@ -1,48 +1,60 @@
 <!DOCTYPE html><html><head>
-        <link rel="stylesheet" type="text/css" href="./style.css">
-    </head>
-    <body>
-        <div id="top-bar">
-            <span class="banner" style="flex: 8;">MATH FRONTIER SEMINAR</span>
-            <img id="logo" src="./RPI_Logo_Default.svg" alt="">
-            <span class="banner" style="flex: 1;"></span>
-        </div>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+<script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
 
-        <div id="flyer">
-        
+</head>
+
+<body>
+    <div id="top-bar">
+        <span class="banner" style="flex: 8;">MATH FRONTIER SEMINAR</span>
+        <img id="logo" src="./RPI_Logo_Default.svg" alt="">
+        <span class="banner" style="flex: 1;"></span>
+    </div>
+
+    <div id="flyer">
+
         <h1 id="title">Low-Rank Approximations in Electronic Structure Methods</h1>
         <div id="speaker-block"><img src="speaker_photos/taziz.jpeg" id="speaker-photo" alt="photo of Talha Aziz ">
-                <!-- <div id="speaker-image"></div> -->
+            <!-- <div id="speaker-image"></div> -->
 
-                <div id="info-block">
-                    <span id="speaker-name">Talha Aziz </span>
-                    <span id="affiliation">RPI Math</span>
+            <div id="info-block">
+                <span id="speaker-name">Talha Aziz </span>
+                <span id="affiliation">RPI Math</span>
 
-                    <div id="venue-block">
-                        <table>
-                            <tbody><tr><td>Time</td> <td>4:00 pm, <span id="date">11/10</span></td></tr>
-                            <tr><td>Location</td> <td>Amos Eaton 216</td> </tr>
-                            <tr><td>Food</td> <td id="food">Fruit and Cookies</td></tr>
-                        </tbody></table>
-                    </div>
+                <div id="venue-block">
+                    <table>
+                        <tbody><tr>
+                            <td>Time</td>
+                            <td>4:00 pm, <span id="date">11/10</span></td>
+                        </tr>
+                        <tr>
+                            <td>Location</td>
+                            <td>Amos Eaton 216</td>
+                        </tr>
+                        <tr>
+                            <td>Food</td>
+                            <td id="food">Fruit and Cookies</td>
+                        </tr>
+                    </tbody></table>
                 </div>
+            </div>
         </div>
 
 
         <div style="margin-top: 1em;">
             <h3 style="border-bottom: 4px solid black; padding-bottom:4pt;">Abstract</h3>
-            <p id="abstract">Reducing the computational cost of correlated electronic structure methods is essential for extending their applicability to large molecular systems. In this work, we apply Canonical Polyadic Decomposition (CPD) to the electron repulsion integral (ERI) tensor within the Møller–Plesset second-order perturbation theory (MP2) framework, significantly lowering the memory requirements and the number of tensor contractions. By combining CPD with a density-fitting ansatz, we achieve a rank-reduced representation of ERIs that reduces computational scaling from $$O(N^5)$$ to $$O(N^3)$$ while maintaining chemical accuracy. This development provides an efficient and scalable strategy for correlated calculations and enables future integration with the Møller–Plesset Coupled-Cluster (MPCC) embedding framework.</p>
+            <p id="abstract">Reducing the computational cost of correlated electronic structure methods is essential for extending their applicability to large molecular systems. In this work, we apply Canonical Polyadic Decomposition (CPD) to the electron repulsion integral (ERI) tensor within the Møller–Plesset second-order perturbation theory (MP2) framework, significantly lowering the memory requirements and the number of tensor contractions. By combining CPD with a density-fitting ansatz, we achieve a rank-reduced representation of ERIs that reduces computational scaling from \(O(N^5)\) to \(O(N^3)\) while maintaining chemical accuracy. This development provides an efficient and scalable strategy for correlated calculations and enables future integration with the Møller–Plesset Coupled-Cluster (MPCC) embedding framework.</p>
         </div>
 
         <div id="bio-block">
             <h3>About the Speaker</h3>
             <p id="bio">Talha Aziz is a PhD student at RPI, working in the field of quantum many-body theory and electronic structure methods. He is particularly interested in scalable implementations of correlated methods.</p>
         </div>
-        </div>
-        <div id="bottom">
-            
-        </div>
-    
-    
+    </div>
+    <div id="bottom">
+
+    </div>
+
 
 </body></html>
