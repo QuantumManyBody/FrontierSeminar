@@ -1,0 +1,68 @@
+<!DOCTYPE html><html><head>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+<script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+    <div id="top-bar">
+        <span class="banner" style="flex: 8;">MATH FRONTIER SEMINAR</span>
+        <img id="logo" src="./RPI_Logo_Default.svg" alt="">
+        <span class="banner" style="flex: 1;"></span>
+    </div>
+
+    <div id="flyer">
+
+        <h1 id="title">Generalized ADMM for Nonlinear Constrained Problems</h1>
+        <div id="speaker-block"><img src="speaker_photos/Xiong.jpeg" id="speaker-photo" alt="photo of Zhengjie Xiong">
+            <!-- <div id="speaker-image"></div> -->
+
+            <div id="info-block">
+                <span id="speaker-name">Zhengjie Xiong</span>
+                <span id="affiliation">Rensselaer Polytechnic Institute</span>
+
+                <div id="venue-block">
+                    <table>
+                        <tbody><tr>
+                            <td>Time</td>
+                            <td>4:00 pm, <span id="date">03/10</span></td>
+                        </tr>
+                        <tr>
+                            <td>Location</td>
+                            <td>Amos Eaton 216</td>
+                        </tr>
+                        <tr>
+                            <td>Food</td>
+                            <td id="food">Wings</td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+
+
+        <div style="margin-top: 1em;">
+            <h3 style="border-bottom: 4px solid black; padding-bottom:4pt;">Abstract</h3>
+            <p id="abstract">A generalized Alternating Direction Method of Multipliers (ADMM) framework is developed for a convex
+                                        optimization problem involving nonlinear inequality constraints, extending ADMM beyond the classical linearly constrained setting.
+                                        The method reformulates the nonlinear constraint to preserve separability and enables stable ADMM-type updates. Under standard regularity
+                                        assumptions, the algorithm achieves global convergence together with an ergodic O(1/k)-type rate for feasibility and optimality measures.
+                                        
+                                        <br>Numerical experiments further demonstrate the practicality of the approach. In a distributed resource allocation problem and a consensus
+                                        machine learning task, the method achieves faster progress and significant communication reduction compared with the Augmented Lagrangian
+                                        Method (ALM) and Douglas–Rachford Splitting (DRS). These results show that the proposed framework provides an efficient and scalable
+                                        alternative for optimization settings involving nonlinear constraint structures.</p>
+        </div>
+
+        <div id="bio-block">
+            <h3>About the Speaker</h3>
+            <p id="bio">Third year Math PhD student @ RPI.</p>
+        </div>
+    </div>
+    <div id="bottom">
+
+    </div>
+
+
+</body></html>

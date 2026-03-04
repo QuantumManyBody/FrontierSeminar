@@ -16,7 +16,7 @@ h1, h2, h3 {
 body {
     font-family: 'Geist', sans-serif;
     font-size: 14pt;
-    
+    text-align: justify;
 }
 #flyer {
     padding: 1em 2em;
@@ -90,6 +90,7 @@ body {
 
 #abstract {
     text-wrap: pretty;
+    text-align: justify;
 }
 
 td:first-child {
