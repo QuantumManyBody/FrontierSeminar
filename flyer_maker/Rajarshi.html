@@ -1,0 +1,67 @@
+<!DOCTYPE html><html><head>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+<script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+    <div id="top-bar">
+        <span class="banner" style="flex: 8;">MATH FRONTIER SEMINAR</span>
+        <img id="logo" src="./RPI_Logo_Default.svg" alt="">
+        <span class="banner" style="flex: 1;"></span>
+    </div>
+
+    <div id="flyer">
+
+        <h1 id="title">Sublinear time eigenvalue and eigenvector approximation using random sampling</h1>
+        <div id="speaker-block"><img src="speaker_photos/Rajarshi.jpeg" id="speaker-photo" alt="photo of Rajarshi Bhattacharjee">
+            <!-- <div id="speaker-image"></div> -->
+
+            <div id="info-block">
+                <span id="speaker-name">Rajarshi Bhattacharjee</span>
+                <span id="affiliation">UMass Amherst CICS</span>
+
+                <div id="venue-block">
+                    <table>
+                        <tbody><tr>
+                            <td>Time</td>
+                            <td>4:00 pm, <span id="date">03/24</span></td>
+                        </tr>
+                        <tr>
+                            <td>Location</td>
+                            <td>Amos Eaton 216</td>
+                        </tr>
+                        <tr>
+                            <td>Food</td>
+                            <td id="food">Wings</td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+
+
+        <div style="margin-top: 1em;">
+            <h3 style="border-bottom: 4px solid black; padding-bottom:4pt;">Abstract</h3>
+            <p id="abstract">We study the problem of approximating the eigenvalues and eigenvectors of a symmetric matrix \(A \in R^{n \times n}\) 
+                                        with bounded entries using random sampling. We present a simple sublinear time algorithm that approximates all eigenvalues of \(A\) up to 
+                                        additive error \(\pm \epsilon n\) using those of a randomly sampled \(\tilde{O} (\frac{1}{\epsilon^2}) \times \tilde{O}(\frac{1}{\epsilon^2} )\) 
+                                        principal submatrix. Our result can be viewed as a concentration bound on the complete eigenspectrum of a random submatrix, significantly 
+                                        extending known bounds on just the singular values. Using similar techniques, we also show that for any eigenvalue \(\lambda\) of A, one can 
+                                        compute a vector v satisfying \(||Av-\lambda v||_2 &lt;=\epsilon n \) by sampling \( \tilde{O}(1/\epsilon^4) \) columns of A. When rows of A can be 
+                                        sampled with probabilities proportional to their squared Euclidean norms, we obtain improved approximation guarantees for the eigenspectrum. </p>
+        </div>
+
+        <div id="bio-block">
+            <h3>About the Speaker</h3>
+            <p id="bio">Rajarshi Bhattacharjee is a Ph.D student in theoretical computer science at UMass Amherst, working on randomized linear algebra
+                                        and online learning. He is advised by Prof. Cameron Musco.</p>
+        </div>
+    </div>
+    <div id="bottom">
+
+    </div>
+
+
+</body></html>
