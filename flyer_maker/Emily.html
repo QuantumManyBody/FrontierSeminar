@@ -1,0 +1,68 @@
+<!DOCTYPE html><html><head>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+<script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+    <div id="top-bar">
+        <span class="banner" style="flex: 8;">MATH FRONTIER SEMINAR</span>
+        <img id="logo" src="./RPI_Logo_Default.svg" alt="">
+        <span class="banner" style="flex: 1;"></span>
+    </div>
+
+    <div id="flyer">
+
+        <h1 id="title">Numerical Analysis of Protein Conformational Ensemble Recovery from Cryo-EM Data</h1>
+        <div id="speaker-block"><img src="speaker_photos/Emily.jpeg" id="speaker-photo" alt="photo of Emily Almgren">
+            <!-- <div id="speaker-image"></div> -->
+
+            <div id="info-block">
+                <span id="speaker-name">Emily Almgren</span>
+                <span id="affiliation">Cornell University CAM</span>
+
+                <div id="venue-block">
+                    <table>
+                        <tbody><tr>
+                            <td>Time</td>
+                            <td>4:00 pm, <span id="date">04/07</span></td>
+                        </tr>
+                        <tr>
+                            <td>Location</td>
+                            <td>Amos Eaton 216</td>
+                        </tr>
+                        <tr>
+                            <td>Food</td>
+                            <td id="food">Pizza🍕</td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+
+
+        <div style="margin-top: 1em;">
+            <h3 style="border-bottom: 4px solid black; padding-bottom:4pt;">Abstract</h3>
+            <p id="abstract">Cryo–electron microscopy (cryo-EM) is an experimental technique that produces high-resolution images of proteins.
+                                        Using these images to recover a single 3D protein structure has been extremely successful. However, proteins are inherently flexible--the
+                                        arrangement of atoms in 3D space, called a molecular conformation, is constantly changing. Recovering the entire probability distributions
+                                        of conformations from cryo-EM data is a challenging inverse problem due to extreme noise levels and unknown imaging parameters. In this talk,
+                                        I analyze ensemble reweighting, a recently introduced Bayesian approach that adjusts probabilities of conformations generated from molecular
+                                        simulations to match experimental cryo-EM images. Using sensitivity analysis on the non-parametric maximum likelihood estimation problem, I
+                                        identify when uninformative, noisy images can be discarded without losing information about rare conformations, thereby reducing the
+                                        computational cost.</p>
+        </div>
+
+        <div id="bio-block">
+            <h3>About the Speaker</h3>
+            <p id="bio">Emily Almgren is an applied mathematics Ph.D. student at Cornell University focusing on numerical analysis with chemistry
+                                        applications. She has a B.S. in Mathematics from Haverford College.</p>
+        </div>
+    </div>
+    <div id="bottom">
+
+    </div>
+
+
+</body></html>
