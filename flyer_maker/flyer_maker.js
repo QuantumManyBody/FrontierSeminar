@@ -30,6 +30,7 @@ flyer_dom.window.document.getElementById("title").innerHTML = title
 flyer_dom.window.document.getElementById("speaker-name").innerHTML = speaker_name
 flyer_dom.window.document.getElementById("abstract").innerHTML = abstract
 flyer_dom.window.document.getElementById("affiliation").innerHTML = affiliation
+flyer_dom.window.document.getElementById("time").innerHTML = speaker_id === "Emily" ? "Noon" : "4:00 pm"
 if (food !== undefined) {
     flyer_dom.window.document.getElementById("food").innerHTML = food
 }
