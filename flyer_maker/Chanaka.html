@@ -1,0 +1,66 @@
+<!DOCTYPE html><html><head>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+<script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+    <div id="top-bar">
+        <span class="banner" style="flex: 8;">MATH FRONTIER SEMINAR</span>
+        <img id="logo" src="./RPI_Logo_Default.svg" alt="">
+        <span class="banner" style="flex: 1;"></span>
+    </div>
+
+    <div id="flyer">
+
+        <h1 id="title">A Gauge-Invariant Newton–Krylov Solver for Coupled-Cluster Equations</h1>
+        <div id="speaker-block"><img src="speaker_photos/Chanaka.jpeg" id="speaker-photo" alt="photo of Chanaka Mapa">
+            <!-- <div id="speaker-image"></div> -->
+
+            <div id="info-block">
+                <span id="speaker-name">Chanaka Mapa</span>
+                <span id="affiliation">RPI MATH</span>
+
+                <div id="venue-block">
+                    <table>
+                        <tbody><tr>
+                            <td>Time</td>
+                            <td><span id="time">4:00 pm</span>, <span id="date">04/21</span></td>
+                        </tr>
+                        <tr>
+                            <td>Location</td>
+                            <td>Amos Eaton 216</td>
+                        </tr>
+                        <tr>
+                            <td>Food</td>
+                            <td id="food">Pizza &amp; Wings🍕🍗</td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+
+
+        <div style="margin-top: 1em;">
+            <h3 style="border-bottom: 4px solid black; padding-bottom:4pt;">Abstract</h3>
+            <p id="abstract">The coupled-cluster (CC) equations are most frequently solved by a fixed-point (FP) iteration. 
+                                        When CC equations are formulated in a different gauge such as in atomic orbital CC theory, a simple FP iteration can be slow to converge or diverge completely. 
+                                        A remedy is an energy level shift and a direct inversion of iterative subspace (DIIS), which motivate quantum chemistry packages to include their own equation solvers.
+                                    However, developing and maintaining dedicated solvers to perform consistently across variants of CC theories costs significantly more effort than using an off-the-shelf solver, and there is little theoretical reason to expect an advantage. 
+                                        In contrary, Chao et al. showed an opposite wall-time advantage in canonical CC using a standard preconditioned Newton Krylov (PNK) method.
+                                    In this study, we generalize the preconditioner to arbitrary gauges by replacing the energy denominator with GMRES, which removes the need for an energy level shift and makes the iteration count of PNK gauge-invariant. 
+                                        We therefore argue that PNK consistently outperforms fine-tuned FP iteration across different gauges.</p>
+        </div>
+
+        <div id="bio-block">
+            <h3>About the Speaker</h3>
+            <p id="bio">Chanaka Mapa is a third-year Ph.D. student in the RPI Department of Mathematical Sciences, supervised by Professor Fabian M. Faulstich. He develops scalable coupled-cluster algorithms.</p>
+        </div>
+    </div>
+    <div id="bottom">
+
+    </div>
+
+
+</body></html>
