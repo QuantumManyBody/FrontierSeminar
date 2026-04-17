@@ -328,6 +328,7 @@ window.addEventListener("load", function() {
                             <td>
                                 <details>
                                     <summary class="speaker-title">First-order methods for solving convex (strongly) concave minimax problems with functional constraints</summary>
+
                                     <p class="speaker-abstract">Convex-concave minimax problems arise in many applications, including robust learning and Stackelberg models. Most 
                                         first-order methods address unconstrained or projection-friendly settings, while functional constraints remain far less explored. We study 
                                         a class of convex-concave and convex-strongly-concave minimax problems with functional constraints. By exploiting strong duality, we 
@@ -337,13 +338,23 @@ window.addEventListener("load", function() {
                                         \(\tilde{\mathcal{O}}(\varepsilon^{-1})\) first-order iteration complexity in the convex-strongly-concave case, from which primal 
                                         \(\varepsilon\)-optimality can be derived. For the convex-concave case, we establish a \(\tilde{\mathcal{O}}(\varepsilon^{-3/2})\) iteration
                                         complexity.</p>
-<<<<<<< HEAD
+
                                     <p class="speaker-bio">Xinhao Ying is a third-year PhD student in the Department of Mathematics at Rensselaer Polytechnic Institute.
 </p>
-=======
+
                                     <p class="speaker-bio">Xinhao Ying is a third-year PhD student in the Department of Mathematics at Rensselaer Polytechnic Institute</p>
->>>>>>> ed3ac396f3656e53c844f08d1537caabe43b3331
+
                                     <p class="speaker-food">TBA</p>
+
+                                    <p class="speaker-abstract">Convex-concave minimax problems arise in many applications, including robust learning and Stackelberg models. 
+                                        Most first-order methods address unconstrained or projection-friendly settings, while functional constraints remain far less explored. 
+                                        In this talk, we will discuss a class of convex-(strongly)-concave minimax problems with functional constraints. Our approach is to 
+                                        reformulate the problem so that a proximal augmented Lagrangian framework can be applied. In particular, by exploiting strong duality, 
+                                        we incorporate the inner functional constraints into the objective. Each resulting subproblem is then solved by an inexact accelerated 
+                                        proximal gradient scheme to handle inexact gradients arising from approximately solving an auxiliary maximization subproblem. The main 
+                                        algorithmic framework is presented, and the iteration complexity for obtaining an \(\epsilon\)-KKT point is established.</p>
+                                    <p class="speaker-bio">Xinhao Ying is a third-year PhD student in the Department of Mathematics at Rensselaer Polytechnic Institute</p>
+                                    <p class="speaker-food">Pizza and wings</p>
                                 </details>
                             </td>
                             <td><span class="affiliation">RPI MATH</span>/<span class="speaker-name">Xinhao Ying</span></td>
@@ -352,27 +363,26 @@ window.addEventListener("load", function() {
                             <td class="speaker-date">04/21</td>
                             <td>
                                 <details>
-                                    <summary class="speaker-title">Investigating the robustness of the fixed-point iteration in local-correlation Coupled-Cluster algorithms</summary>
-                                    <p class="speaker-abstract">CC theory is a high-accuracy method in electronic-structure calculations, but its steep scaling has motivated local
-                                        correlation (LC) methods relying on unitary transformations away from the MO basis, where cluster amplitudes are commonly updated with
-                                        fixed-point (FP) iteration using orbital-energy denominators, an approach supported by the diagonal Fock operator and its perturbative
-                                        relation to the 0th-order Hamiltonian. Transformed orbitals enhance locality or screening, but perturbative partitioning is disrupted and
-                                        the canonical FP map is not guaranteed to converge. We show that under such gauge transformations the FP iteration can acquire spectral
-                                        radius greater than unity and diverge for realistic molecules. We assess a gauge-robust solver effective across gauges, and demonstrate that
-                                        it reliably restores convergence in LCCC calculations. Our results clarify the gauge dependence of solver performance in CC theory and provide
-                                        a practical path toward stable, efficient LC algorithms.</p>
+                                    <summary class="speaker-title">A Gauge-Invariant Newton–Krylov Solver for Coupled-Cluster Equations</summary>
+                                    <p class="speaker-abstract">The coupled-cluster (CC) equations are most frequently solved by a fixed-point (FP) iteration. 
+                                        When CC equations are formulated in a different gauge such as in atomic orbital CC theory, a simple FP iteration can be slow to converge or diverge completely. 
+                                        A remedy is an energy level shift and a direct inversion of iterative subspace (DIIS), which motivate quantum chemistry packages to include their own equation solvers.
+                                    However, developing and maintaining dedicated solvers to perform consistently across variants of CC theories costs significantly more effort than using an off-the-shelf solver, and there is little theoretical reason to expect an advantage. 
+                                        In contrary, Chao et al. showed an opposite wall-time advantage in canonical CC using a standard preconditioned Newton Krylov (PNK) method.
+                                    In this study, we generalize the preconditioner to arbitrary gauges by replacing the energy denominator with GMRES, which removes the need for an energy level shift and makes the iteration count of PNK gauge-invariant. 
+                                        We therefore argue that PNK consistently outperforms fine-tuned FP iteration across different gauges.</p>
                                     <p class="speaker-bio">Chanaka Mapa is a third-year Ph.D. student in the RPI Department of Mathematical Sciences, supervised by professor Fabian M.
                                         Falustich. He develops scalable coupled-cluster algorithms.</p>
-                                    <p class="speaker-food">TBA</p>
+                                    <p class="speaker-food">Pizza & Wings🍕🍗</p>
                                 </details>
                             </td>
-                            <td><span class="affiliation">RPI MATH</span>/<span class="speaker-name"><a href="https://chanakadilshanmapa.github.io/" target="_blank">Chanaka Mapa Mudiyanselange</a></span></td>
+                            <td><span class="affiliation">RPI MATH</span>/<span class="speaker-name"><a href="https://chanakadilshanmapa.github.io/" target="_blank">Chanaka Mapa</a></span></td>
                         </tr>
                     </table>
             </div>
 
             <div style="margin-bottom: 6em;">
-            <h2>Submit an Abstract for Spring 26</h2>
+            <h2>Submit an Abstract for Fall 2026</h2>
             <form id="abstract"
                 method="POST"
                 action="https://script.google.com/macros/s/AKfycbwjlV3JWnZ6aUAOr7kLYzmQvvNdZaMBwM2GmnCLaKr1HQO569AdCKtMMwldIGMDti25/exec">
