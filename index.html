@@ -160,10 +160,10 @@ window.addEventListener("load", function() {
                 <div>
                     <h1 style="margin: 0em;">Math Frontier Seminar</h1>
                     <p style="margin-top: 0.2em;">Department of Mathematical Sciences</p>
-                    <p style="margin: 0.2em 0em">Tuesdays @ 4:00pm EST, Location TBA</p>  
-                    <!--<div class="notice" style="margin-top:0.5em; margin-bottom:0.5em; background:rgb(30,30,30); padding:0.6em 1em; border-radius:6px; border-left:6px solid #fff;">
-                        Special notice: Emily Almgren's talk is on Tuesday, 04/07 @ Noon, AE216.
-                    </div>-->
+                    <p style="margin: 0.2em 0em">Tuesdays @ 4:00pm EST, Location SAGE 2715</p>
+                    <div class="notice" style="margin-top:0.5em; margin-bottom:0.5em; background:rgb(30,30,30); padding:0.6em 1em; border-radius:6px; border-left:6px solid #fff;">
+                        Special notice: Chris Wang's talk is on Monday, 10/19.
+                    </div>
                 </div>
                 <image id="rpi" style="width: auto; height:3em; margin: 1em;" src="./logo.png" alt="">
             </div>
@@ -218,155 +218,125 @@ window.addEventListener("load", function() {
 
             <div style="margin-bottom: 6em;">
             <h2>Schedule</h2>
-                    <tr>Scheduling for Fall 2026 is in progress, please return at a later date.</tr>
-                    <!--<table class="schedule">
+                    <!--<tr>Scheduling for Fall 2026 is in progress, please return at a later date.</tr>-->
+                    <table class="schedule">
                         <tr>
                             <th>Date</th>
                             <th>Title <span>(click for abstract)</span></th>
                             <th>Speaker</th>
                         </tr>
                         
-                        <tr id="Xiong">
-                            <td class="speaker-date">03/10</td>
+                        <tr id="doanc">
+                            <td class="speaker-date">10/06</td>
                             <td>
                                 <details>
-                                    <summary class="speaker-title">Generalized ADMM for Nonlinear Constrained Problems</summary>
-                                    <p class="speaker-abstract">A generalized Alternating Direction Method of Multipliers (ADMM) framework is developed for a convex
-                                        optimization problem involving nonlinear inequality constraints, extending ADMM beyond the classical linearly constrained setting.
-                                        The method reformulates the nonlinear constraint to preserve separability and enables stable ADMM-type updates. Under standard regularity
-                                        assumptions, the algorithm achieves global convergence together with an ergodic O(1/k)-type rate for feasibility and optimality measures.
+                                    <summary class="speaker-title">Dynamically Regularized Lagrange Multiplier Method for the Incompressible Navier–Stokes Equations</summary>
+                                    <p class="speaker-abstract">In this talk, I will present efficient numerical schemes based on the Lagrange multiplier approach for the 
+                                        Navier-Stokes equations. By introducing a dynamic equation (involving the kinetic energy, the Lagrange multiplier, and a regularization 
+                                        parameter), we form a new system that incorporates the energy evolution process while remaining equivalent to the original equations. 
+                                        Such nonlinear system is then discretized in time using backward differentiation formulas, resulting in a dynamically regularized 
+                                        Lagrange multiplier (DRLM) method. First- and second-order DRLM schemes are derived and shown to be unconditionally energy stable with
+                                        respect to the original variables. Optimal error estimates for the velocity and pressure of the first-order DRLM scheme are established
+                                        through a uniform bound on the Lagrange multiplier and mathematical induction. Numerical experiments demonstrate the accuracy, 
+                                        stability, and robustness of the proposed schemes.</p>
+                                    <p class="speaker-bio">I am a PhD student at Auburn University, joining RPI as a postdoctoral researcher in Fall 2026. My research focuses 
+                                        on numerical methods for PDEs and reduced-order models for kinetic equations.</p>
+                                    <p class="speaker-food">Pizza</p>
+                                </details>
+                            </td>
+                            <td>
+                            <span class="affiliation">RPI MATH</span>/<span class="speaker-name">Kha Doan</span>
+                        </td>
+                        </tr>
+                        </tr>
+                        <tr id="currac4">
+                            <td class="speaker-date">10/17</td>
+                            <td>
+                                <details>
+                                    <summary class="speaker-title">Optimal Matching for Hybrid Clinical Trials via Multiobjective Bipartite Matching</summary>
+                                    <p class="speaker-abstract">In this talk, I will presents an optimal matching framework for Hybrid Clinical Trials (HCTs), which combine
+                                        randomized controlled trial (RCT) data with real-world electronic health record (EHR) data to estimate target-population treatment effects
+                                        using hybrid control arms. HCTs can improve trial efficiency, generalizability, and precision, while reducing costs. We formulate hybrid
+                                        cohort construction as a bipartite matching problem and solve it using linear programming. A weighted objective function jointly reduces
+                                        internal bias between the treatment and hybrid control arms while promoting generalizability to the target population. We evaluate the
+                                        approach using FRESCA simulations parameterized with data from the ALLHAT and SPRINT RCTs, and extend FRESCA to quantify internal validity
+                                        via cohort internal disparity. Across simulation studies, HCT optimal-matching (HCT-OM) variants yield accurate population hazard ratio
+                                        estimates and improved internal validity compared with baseline matching approaches. These findings suggest that optimal matching provides
+                                        a flexible and promising methodology for estimating population treatment effects for the treated when integrating RCT and EHR data.</p>
+                                    <p class="speaker-bio">Corey is a fourth year PhD student in the Department of Mathematical Sciences at Rensselaer Polytechnic Institute. 
+                                        His research focuses on applying optimization techniques to public health problems.</p>
+                                    <p class="speaker-food">TBA</p>
+                                </details>
+                            </td>
+                            <td>
+                            <span class="affiliation">RPI MATH</span>/<span class="speaker-name">Corey Curran</span>
+                        </td>
+                        </tr>
+                        <tr id="wangchristopher">
+                            <td class="speaker-date">10/19</td>
+                            <td>
+                                <details>
+                                    <summary class="speaker-title">Sample complexity lower bounds for learning solution operators of advective PDEs</summary>
+                                    <p class="speaker-abstract">"Learning solution operators of PDEs from input-output data is an important task in scientific machine learning. 
+                                        While current approaches can be quite successful for diffusion-dominated equations, advection-dominated equations prove much more difficult. 
+                                        I'll show how statistical learning theory allows one to derive sample complexity lower bounds for learning solution operators of certain
+                                        classes of advective equations from data, using the transport equation as a toy model. At the end, I'll give some results showing that 
+                                        learning the solution operator of some advective equations can be impossible, even with added diffusion, if the input data are too smooth.
                                         
-                                        <br>Numerical experiments further demonstrate the practicality of the approach. In a distributed resource allocation problem and a consensus
-                                        machine learning task, the method achieves faster progress and significant communication reduction compared with the Augmented Lagrangian
-                                        Method (ALM) and Douglas–Rachford Splitting (DRS). These results show that the proposed framework provides an efficient and scalable
-                                        alternative for optimization settings involving nonlinear constraint structures.</p>
-                                    <p class="speaker-bio">Third year Math PhD student @ RPI.</p>
-                                    <p class="speaker-food">Wings</p>
+                                        (Joint work with Diana Halikias and Alex Townsend.)"</p>
+                                    <p class="speaker-bio">Chris is a PhD candidate at Cornell University being advised by Alex Townsend. His primary research interests are in 
+                                        randomized numerical linear algebra and in PDE operator learning.</p>
+                                    <p class="speaker-food">TBA</p>
                                 </details>
                             </td>
-                            <td>
-                            <span class="affiliation">RPI MATH</span>/<span class="speaker-name">Zhengjie Xiong</span>
-                        </td>
-                        </tr>
-                        </tr>
-                        <tr id="Aaron">
-                            <td class="speaker-date">03/17</td>
-                            <td>
-                                <details>
-                                    <summary class="speaker-title">Graph Pebbling Algorithms and Graham's Conjecture</summary>
-                                    <p class="speaker-abstract">A pebbling configuration on a simple, connected graph assigns a nonnegative integer to each vertex. A pebbling move 
-                                        removes two pebbles from one vertex and places one on an adjacent vertex. A vertex is reachable if a sequence of moves places a pebble on it, 
-                                        and a configuration is solvable if every vertex is reachable. The pebbling number π(G) is the minimum size of a solvable configuration on G. 
-                                        A graph satisfies the two-pebbling property if any configuration with more than 2π(G)−q pebbles, where q is the number of occupied vertices, 
-                                        can place two pebbles on any vertex; otherwise it is a Lemke graph. We present an algorithm to test reachability and solvability, describe 
-                                        methods for computing π(G) and the two-pebbling property, and determine all Lemke graphs on at most nine vertices, including many previously 
-                                        unknown examples.</p>
-                                    <p class="speaker-bio">Aaron Micah Green is currently teaching at Vassar College. He earned his PhD in Applied Math from RPI in August 2025. He 
-                                        previously worked as a software engineer for Epic Systems in Madison, WI.</p>
-                                    <p class="speaker-food">Sandwiches</p>
-                                </details>
-                            </td>
-                            <td>
-                            <span class="affiliation">Vassar College MATH</span>/<span class="speaker-name">Aaron Green</span>
-                        </td>
-                        </tr>
-                        <tr id="Rajarshi">
-                            <td class="speaker-date">03/24</td>
-                            <td>
-                                <details>
-                                    <summary class="speaker-title">Sublinear time eigenvalue and eigenvector approximation using random sampling</summary>
-                                    <p class="speaker-abstract">We study the problem of approximating the eigenvalues and eigenvectors of a symmetric matrix \(A \in R^{n \times n}\) 
-                                        with bounded entries using random sampling. We present a simple sublinear time algorithm that approximates all eigenvalues of \(A\) up to 
-                                        additive error \(\pm \epsilon n\) using those of a randomly sampled \(\tilde{O} (\frac{1}{\epsilon^2}) \times \tilde{O}(\frac{1}{\epsilon^2} )\) 
-                                        principal submatrix. Our result can be viewed as a concentration bound on the complete eigenspectrum of a random submatrix, significantly 
-                                        extending known bounds on just the singular values. Using similar techniques, we also show that for any eigenvalue \(\lambda\) of A, one can 
-                                        compute a vector v satisfying \(||Av-\lambda v||_2 <=\epsilon n \) by sampling \( \tilde{O}(1/\epsilon^4) \) columns of A. When rows of A can be 
-                                        sampled with probabilities proportional to their squared Euclidean norms, we obtain improved approximation guarantees for the eigenspectrum. </p>
-                                    <p class="speaker-bio">Rajarshi Bhattacharjee is a Ph.D student in theoretical computer science at UMass Amherst, working on randomized linear algebra
-                                        and online learning. He is advised by Prof. Cameron Musco.</p>
-                                    <p class="speaker-food">Wings</p>
-                                </details>
-                            </td>
-                            <td><span class="affiliation">UMass Amherst CICS</span>/<span class="speaker-name">Rajarshi Bhattacharjee</span></td>
+                            <td><span class="affiliation">Cornell MATH</span>/<span class="speaker-name">Christopher Wang</span></td>
                         </tr>                        
-                        <tr id="Jake">
-                            <td class="speaker-date">03/31</td>
+                        <tr id="mengf6">
+                            <td class="speaker-date">10/27</td>
                             <td>
                                 <details>
-                                    <summary class="speaker-title">Categorizing Polar Vortices Using Persistent Homology</summary>
-                                    <p class="speaker-abstract">A Sudden Stratospheric Warming (SSW) is an extreme wintertime circulation event in the Northern Hemisphere. There
-                                        have been many technical definitions of SSW's proposed over the last 60 years, but none have been widely accepted. By using Persistent
-                                        Homology to detect and categorize the shape of Polar Vortices, we introduce a new constant-free definition that uses a scale of intensity
-                                        rather than a cut-off. This approach is very promising as it agrees with previous definitions when different intensities are considered.</p>
-                                    <p class="speaker-bio">Jake Cordes is a third-year Ph.D. Student studying computational topology at The University at Albany. He is advised by 
-                                        Barbara Giunti and focuses on optimizing algorithms for Persistent Homology Transforms and Persistence Vineyards.</p>
-                                    <p class="speaker-food">Sandwiches</p>
+                                    <summary class="speaker-title">TBA</summary>
+                                    <p class="speaker-abstract">"This work studies the solution of Helmholtz problems arising from coupled wave--polarization systems. Such systems
+                                        appear when a wave field interacts with local material responses, leading to frequency-dependent behavior in the corresponding time-harmonic 
+                                        problem. This frequency dependence makes the resulting Helmholtz equation dispersive and motivates the use of time-domain methods for solving
+                                        frequency-domain problems.
+                                        
+                                        We extend the WaveHoltz method to this coupled dispersive setting. The method solves the Helmholtz problem by evolving the associated forced
+                                        time-dependent system and applying a temporal filter to extract the desired time-periodic component. We formulate the WaveHoltz iteration for
+                                        the coupled system, and analyze the method at both the continuous and fully discrete levels."</p>
+                                    <p class="speaker-bio">I am Fansu Meng, I am currently a 3rd year phd student focusing on numerical computation.</p>
+                                    <p class="speaker-food">TBA</p>
                                 </details>
                             </td>
-                            <td><span class="affiliation">UAlbany AMAT</span>/<span class="speaker-name">Jake Cordes</span></td>
+                            <td><span class="affiliation">RPI MATH</span>/<span class="speaker-name">Fansu Meng</span></td>
                         </tr>
-                        <tr id="Emily">
-                            <td class="speaker-date">04/07</td>
+                        <tr id="TBA">
+                            <td class="speaker-date">11/03</td>
                             <td>
                                 <details>
-                                    <summary class="speaker-title">Numerical Analysis of Protein Conformational Ensemble Recovery from Cryo-EM Data</summary>
-                                    <p class="speaker-abstract">Cryo–electron microscopy (cryo-EM) is an experimental technique that produces high-resolution images of proteins.
-                                        Using these images to recover a single 3D protein structure has been extremely successful. However, proteins are inherently flexible--the
-                                        arrangement of atoms in 3D space, called a molecular conformation, is constantly changing. Recovering the entire probability distributions
-                                        of conformations from cryo-EM data is a challenging inverse problem due to extreme noise levels and unknown imaging parameters. In this talk,
-                                        I analyze ensemble reweighting, a recently introduced Bayesian approach that adjusts probabilities of conformations generated from molecular
-                                        simulations to match experimental cryo-EM images. Using sensitivity analysis on the non-parametric maximum likelihood estimation problem, I
-                                        identify when uninformative, noisy images can be discarded without losing information about rare conformations, thereby reducing the
-                                        computational cost.</p>
-                                    <p class="speaker-bio">Emily Almgren is an applied mathematics Ph.D. student at Cornell University focusing on numerical analysis with chemistry
-                                        applications. She has a B.S. in Mathematics from Haverford College.</p>
-                                    <p class="speaker-food">Pizza & Wings🍕🍗</p>
+                                    <summary class="speaker-title">TBA</summary>
+                                    <p class="speaker-abstract">TBA</p>
+                                    <p class="speaker-bio">TBA</p>
+                                    <p class="speaker-food">TBA</p>
                                 </details>
                             </td>
-                            <td><span class="affiliation">Cornell University CAM</span>/<span class="speaker-name">Emily Almgren</span></td>
+                            <td><span class="affiliation">TBA</span>/<span class="speaker-name">TBA</span></td>
                         </tr>
-                        <tr id="Xinhao">
-                            <td class="speaker-date">04/14</td>
+                        <tr id="weredg">
+                            <td class="speaker-date">11/10</td>
                             <td>
                                 <details>
-                                    <summary class="speaker-title">First-order methods for solving convex (strongly) concave minimax problems with functional constraints</summary>
+                                    <summary class="speaker-title">TBA</summary>
 
-                                    <p class="speaker-abstract">Convex-concave minimax problems arise in many applications, including robust learning and Stackelberg models. Most 
-                                        first-order methods address unconstrained or projection-friendly settings, while functional constraints remain far less explored. We study 
-                                        a class of convex-concave and convex-strongly-concave minimax problems with functional constraints. By exploiting strong duality, we 
-                                        incorporate the inner functional constraints into the objective, which allows us to apply a proximal augmented Lagrangian framework. Each 
-                                        resulting subproblem is then solved by an inexact accelerated proximal gradient scheme to handle inexact gradients arising from approximately 
-                                        solving an auxiliary maximization subproblem. We show that the proposed method returns a primal-dual \(\varepsilon\)-KKT point, requiring 
-                                        \(\tilde{\mathcal{O}}(\varepsilon^{-1})\) first-order iteration complexity in the convex-strongly-concave case, from which primal 
-                                        \(\varepsilon\)-optimality can be derived. For the convex-concave case, we establish a \(\tilde{\mathcal{O}}(\varepsilon^{-3/2})\) iteration
-                                        complexity.</p>
+                                    <p class="speaker-abstract">TBA</p>
 
-                                    <p class="speaker-bio">Xinhao Ying is a third-year PhD student in the Department of Mathematics at Rensselaer Polytechnic Institute</p>
-                                    <p class="speaker-food">Pizza and wings</p>
+                                    <p class="speaker-bio">TBA</p>
+                                    <p class="speaker-food">TBA</p>
                                 </details>
                             </td>
-                            <td><span class="affiliation">RPI MATH</span>/<span class="speaker-name">Xinhao Ying</span></td>
+                            <td><span class="affiliation">RPI MATH</span>/<span class="speaker-name">Gabriel Weredyk</span></td>
                         </tr>
-                        <tr id="Chanaka">
-                            <td class="speaker-date">04/21</td>
-                            <td>
-                                <details>
-                                    <summary class="speaker-title">A Gauge-Invariant Newton–Krylov Solver for Coupled-Cluster Equations</summary>
-                                    <p class="speaker-abstract">The coupled-cluster (CC) equations are most frequently solved by a fixed-point (FP) iteration. 
-                                        When CC equations are formulated in a different gauge such as in atomic orbital CC theory, a simple FP iteration can be slow to converge or diverge completely. 
-                                        A remedy is an energy level shift and a direct inversion of iterative subspace (DIIS), which motivate quantum chemistry packages to include their own equation solvers.
-                                    However, developing and maintaining dedicated solvers to perform consistently across variants of CC theories costs significantly more effort than using an off-the-shelf solver, and there is little theoretical reason to expect an advantage. 
-                                        In contrary, Chao et al. showed an opposite wall-time advantage in canonical CC using a standard preconditioned Newton Krylov (PNK) method.
-                                    In this study, we generalize the preconditioner to arbitrary gauges by replacing the energy denominator with GMRES, which removes the need for an energy level shift and makes the iteration count of PNK gauge-invariant. 
-                                        We therefore argue that PNK consistently outperforms fine-tuned FP iteration across different gauges.</p>
-                                    <p class="speaker-bio">Chanaka Mapa is a third-year Ph.D. student in the RPI Department of Mathematical Sciences, supervised by professor Fabian M.
-                                        Falustich. He develops scalable coupled-cluster algorithms.</p>
-                                    <p class="speaker-food">Pizza & Wings🍕🍗</p>
-                                </details>
-                            </td>
-                            <td><span class="affiliation">RPI MATH</span>/<span class="speaker-name"><a href="https://chanakadilshanmapa.github.io/" target="_blank">Chanaka Mapa</a></span></td>
-                        </tr>
-                    </table>-->
+                    </table>
             </div>
 
             <div style="margin-bottom: 6em;">
