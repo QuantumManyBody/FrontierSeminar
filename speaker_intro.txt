@@ -1,0 +1,7 @@
+The following is a simple template for speaker introductions. Feel free to ad lib and spice things up as you see fit
+
+Welcome to the Frontier Seminar
+Today's speaker is [title] [full name].
+[short name] is a [role (postdoc, nth year graduate student, etc)] in the [school/organization] [department].
+[summarise any relevant info from provided speaker bio (i.e. degrees, schools, employment, etc.) as you see fit]
+...and they are going to talk to us today about [short talk title].
